@@ -1,0 +1,1 @@
+Data Source=DESKTOP-6K85UIR\SQLEXPRESS;Initial Catalog=QuanLyPhongMach;Integrated Security=True
