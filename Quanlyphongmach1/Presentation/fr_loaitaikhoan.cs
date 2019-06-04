@@ -178,8 +178,13 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dsloaitk_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_maloaitk.Text = dgv_dsloaitk.Rows[dong].Cells[0].Value.ToString();
-            txt_tenloaitk.Text = dgv_dsloaitk.Rows[dong].Cells[1].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                txt_maloaitk.Text = dgv_dsloaitk.Rows[dong].Cells[0].Value.ToString();
+                txt_tenloaitk.Text = dgv_dsloaitk.Rows[dong].Cells[1].Value.ToString();
+            }
+
             locktext();
         }
     }

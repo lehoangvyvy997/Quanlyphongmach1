@@ -126,14 +126,7 @@ namespace Quanlyphongmach1.Presentation
 
             switch (key)
             {
-                case "Admin":
-                    {
-                        fr_quanlychung f = new fr_quanlychung();
-                        this.Hide();
-                        f.ShowDialog();
-                        this.Show();
-                        break;
-                    }
+             
                 case "Bác sĩ răng hàm mặt":
                     {
                         fr_phieukham f = new fr_phieukham(maNV, "Răng - Hàm - Mặt");

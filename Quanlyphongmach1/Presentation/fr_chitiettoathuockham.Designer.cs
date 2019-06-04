@@ -83,6 +83,7 @@
             this.dgv_dsctthk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsctthk.Location = new System.Drawing.Point(0, 0);
             this.dgv_dsctthk.Name = "dgv_dsctthk";
+            this.dgv_dsctthk.ReadOnly = true;
             this.dgv_dsctthk.Size = new System.Drawing.Size(615, 161);
             this.dgv_dsctthk.TabIndex = 0;
             this.dgv_dsctthk.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);

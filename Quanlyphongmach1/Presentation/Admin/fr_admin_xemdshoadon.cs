@@ -151,20 +151,23 @@ namespace Quanlyphongmach1.Presentation.Admin
         {
             dong = e.RowIndex;
 
-            txt_sohd.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            txt_mabenhnhan.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
-            if (dgv_ds.Rows[dong].Cells[3].Value.ToString()==""&& dgv_ds.Rows[dong].Cells[4].Value.ToString()=="")
-            { txt_sophieukham.Text = "1"; }
-            if (dgv_ds.Rows[dong].Cells[3].Value.ToString() != "" && dgv_ds.Rows[dong].Cells[4].Value.ToString() == "")
-            { txt_sophieukham.Text = "2"; }
-            if (dgv_ds.Rows[dong].Cells[3].Value.ToString() != "" && dgv_ds.Rows[dong].Cells[4].Value.ToString() != "")
-            { txt_sophieukham.Text = "3"; }
-            txt_ngaylaphd.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
-            txt_tienkham.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
-            txt_tienthuoc.Text = dgv_ds.Rows[dong].Cells[7].Value.ToString();
-            txt_tiendvkt.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
-            txt_tiendvsc.Text = dgv_ds.Rows[dong].Cells[9].Value.ToString();
-            txt_tongtien.Text = dgv_ds.Rows[dong].Cells[10].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_sohd.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
+                txt_mabenhnhan.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
+                if (dgv_ds.Rows[dong].Cells[3].Value.ToString() == "" && dgv_ds.Rows[dong].Cells[4].Value.ToString() == "")
+                { txt_sophieukham.Text = "1"; }
+                if (dgv_ds.Rows[dong].Cells[3].Value.ToString() != "" && dgv_ds.Rows[dong].Cells[4].Value.ToString() == "")
+                { txt_sophieukham.Text = "2"; }
+                if (dgv_ds.Rows[dong].Cells[3].Value.ToString() != "" && dgv_ds.Rows[dong].Cells[4].Value.ToString() != "")
+                { txt_sophieukham.Text = "3"; }
+                txt_ngaylaphd.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
+                txt_tienkham.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
+                txt_tienthuoc.Text = dgv_ds.Rows[dong].Cells[7].Value.ToString();
+                txt_tiendvkt.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
+                txt_tiendvsc.Text = dgv_ds.Rows[dong].Cells[9].Value.ToString();
+                txt_tongtien.Text = dgv_ds.Rows[dong].Cells[10].Value.ToString();
+            }
         }
     }
 }

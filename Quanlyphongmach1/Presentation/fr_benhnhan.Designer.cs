@@ -94,6 +94,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(1, 2);
             this.panel2.Name = "panel2";
@@ -104,7 +105,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(499, 7);
             this.label1.Name = "label1";
@@ -114,6 +115,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox1.Controls.Add(this.dtm_ngaykham);
             this.groupBox1.Controls.Add(this.cbo_gioitinh);
             this.groupBox1.Controls.Add(this.txt_diachi);
@@ -276,6 +278,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox2.Controls.Add(this.btn_laysopk1);
             this.groupBox2.Controls.Add(this.txt_hdpk1);
             this.groupBox2.Controls.Add(this.txt_hhdpk1);
@@ -285,7 +288,7 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Location = new System.Drawing.Point(2, 281);
+            this.groupBox2.Location = new System.Drawing.Point(2, 278);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(523, 128);
             this.groupBox2.TabIndex = 5;
@@ -294,11 +297,11 @@
             // 
             // btn_laysopk1
             // 
-            this.btn_laysopk1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_laysopk1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_laysopk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_laysopk1.Location = new System.Drawing.Point(431, 84);
+            this.btn_laysopk1.Location = new System.Drawing.Point(431, 79);
             this.btn_laysopk1.Name = "btn_laysopk1";
-            this.btn_laysopk1.Size = new System.Drawing.Size(86, 26);
+            this.btn_laysopk1.Size = new System.Drawing.Size(86, 30);
             this.btn_laysopk1.TabIndex = 9;
             this.btn_laysopk1.Text = "Lấy số";
             this.btn_laysopk1.UseVisualStyleBackColor = false;
@@ -377,9 +380,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgv_ds);
-            this.panel1.Location = new System.Drawing.Point(531, 56);
+            this.panel1.Location = new System.Drawing.Point(531, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(816, 640);
+            this.panel1.Size = new System.Drawing.Size(816, 651);
             this.panel1.TabIndex = 6;
             // 
             // dgv_ds
@@ -388,12 +391,14 @@
             this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds.Name = "dgv_ds";
-            this.dgv_ds.Size = new System.Drawing.Size(816, 640);
+            this.dgv_ds.ReadOnly = true;
+            this.dgv_ds.Size = new System.Drawing.Size(816, 651);
             this.dgv_ds.TabIndex = 0;
             this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox3.Controls.Add(this.btn_laysopk2);
             this.groupBox3.Controls.Add(this.txt_hdpk2);
             this.groupBox3.Controls.Add(this.txt_hhdpk2);
@@ -403,7 +408,7 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Location = new System.Drawing.Point(2, 408);
+            this.groupBox3.Location = new System.Drawing.Point(2, 409);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(522, 117);
             this.groupBox3.TabIndex = 5;
@@ -412,11 +417,11 @@
             // 
             // btn_laysopk2
             // 
-            this.btn_laysopk2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_laysopk2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_laysopk2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_laysopk2.Location = new System.Drawing.Point(431, 80);
+            this.btn_laysopk2.Location = new System.Drawing.Point(431, 79);
             this.btn_laysopk2.Name = "btn_laysopk2";
-            this.btn_laysopk2.Size = new System.Drawing.Size(86, 26);
+            this.btn_laysopk2.Size = new System.Drawing.Size(86, 31);
             this.btn_laysopk2.TabIndex = 11;
             this.btn_laysopk2.Text = "Lấy số";
             this.btn_laysopk2.UseVisualStyleBackColor = false;
@@ -494,6 +499,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox4.Controls.Add(this.btn_laysopk3);
             this.groupBox4.Controls.Add(this.txt_hdpk3);
             this.groupBox4.Controls.Add(this.txt_hhdpk3);
@@ -503,7 +509,7 @@
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Location = new System.Drawing.Point(1, 525);
+            this.groupBox4.Location = new System.Drawing.Point(1, 529);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(523, 116);
             this.groupBox4.TabIndex = 5;
@@ -512,11 +518,11 @@
             // 
             // btn_laysopk3
             // 
-            this.btn_laysopk3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_laysopk3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btn_laysopk3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_laysopk3.Location = new System.Drawing.Point(432, 80);
+            this.btn_laysopk3.Location = new System.Drawing.Point(432, 79);
             this.btn_laysopk3.Name = "btn_laysopk3";
-            this.btn_laysopk3.Size = new System.Drawing.Size(86, 26);
+            this.btn_laysopk3.Size = new System.Drawing.Size(86, 31);
             this.btn_laysopk3.TabIndex = 13;
             this.btn_laysopk3.Text = "Lấy số";
             this.btn_laysopk3.UseVisualStyleBackColor = false;
@@ -626,7 +632,7 @@
             // 
             this.panel3.Controls.Add(this.btn_them);
             this.panel3.Controls.Add(this.btn_luu);
-            this.panel3.Location = new System.Drawing.Point(10, 643);
+            this.panel3.Location = new System.Drawing.Point(10, 645);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(515, 53);
             this.panel3.TabIndex = 8;

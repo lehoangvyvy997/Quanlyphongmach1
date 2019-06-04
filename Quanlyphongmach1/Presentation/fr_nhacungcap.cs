@@ -357,15 +357,20 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dsncc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_mancc.Text = dgv_dsncc.Rows[dong].Cells[0].Value.ToString();
-            txt_tenncc.Text = dgv_dsncc.Rows[dong].Cells[1].Value.ToString();
-            txt_diachincc.Text = dgv_dsncc.Rows[dong].Cells[2].Value.ToString();
-            txt_sdtncc.Text = dgv_dsncc.Rows[dong].Cells[3].Value.ToString();
-            txt_mailncc.Text = dgv_dsncc.Rows[dong].Cells[4].Value.ToString();
-            txt_mathangcc.Text = dgv_dsncc.Rows[dong].Cells[5].Value.ToString();
-            txt_stkncc.Text = dgv_dsncc.Rows[dong].Cells[6].Value.ToString();
-            txt_nganhang.Text = dgv_dsncc.Rows[dong].Cells[7].Value.ToString();
-            cbo_tinhtrang.Text = dgv_dsncc.Rows[dong].Cells[8].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                txt_mancc.Text = dgv_dsncc.Rows[dong].Cells[0].Value.ToString();
+                txt_tenncc.Text = dgv_dsncc.Rows[dong].Cells[1].Value.ToString();
+                txt_diachincc.Text = dgv_dsncc.Rows[dong].Cells[2].Value.ToString();
+                txt_sdtncc.Text = dgv_dsncc.Rows[dong].Cells[3].Value.ToString();
+                txt_mailncc.Text = dgv_dsncc.Rows[dong].Cells[4].Value.ToString();
+                txt_mathangcc.Text = dgv_dsncc.Rows[dong].Cells[5].Value.ToString();
+                txt_stkncc.Text = dgv_dsncc.Rows[dong].Cells[6].Value.ToString();
+                txt_nganhang.Text = dgv_dsncc.Rows[dong].Cells[7].Value.ToString();
+                cbo_tinhtrang.Text = dgv_dsncc.Rows[dong].Cells[8].Value.ToString();
+            }
+
             locktext();
         }
     }

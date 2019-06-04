@@ -52,39 +52,39 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tab1 = new System.Windows.Forms.TabControl();
             this.tag1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_luu1 = new System.Windows.Forms.Button();
+            this.btn_capnhat1 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.dgv_ds1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_ht1 = new System.Windows.Forms.Button();
             this.txt_search1 = new System.Windows.Forms.TextBox();
             this.btn_search1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_luu2 = new System.Windows.Forms.Button();
+            this.btn_capnhat2 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.dgv_ds2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btn_ht2 = new System.Windows.Forms.Button();
             this.txt_search2 = new System.Windows.Forms.TextBox();
             this.btn_search2 = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dgv_ds1 = new System.Windows.Forms.DataGridView();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.dgv_ds2 = new System.Windows.Forms.DataGridView();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btn_luu1 = new System.Windows.Forms.Button();
-            this.btn_capnhat1 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btn_luu2 = new System.Windows.Forms.Button();
-            this.btn_capnhat2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tag1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ds1)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ds2)).BeginInit();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -99,7 +99,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(211, 9);
             this.label1.Name = "label1";
@@ -329,133 +329,6 @@
             this.tag1.Text = "Dụng cụ y tế còn sử dụng";
             this.tag1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel9);
-            this.tabPage2.Controls.Add(this.panel7);
-            this.tabPage2.Controls.Add(this.panel5);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(404, 262);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Dụng cụ y tế ngừng sử dụng";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.btn_ht1);
-            this.panel4.Controls.Add(this.txt_search1);
-            this.panel4.Controls.Add(this.btn_search1);
-            this.panel4.Location = new System.Drawing.Point(2, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(399, 35);
-            this.panel4.TabIndex = 1;
-            // 
-            // btn_ht1
-            // 
-            this.btn_ht1.Location = new System.Drawing.Point(3, 4);
-            this.btn_ht1.Name = "btn_ht1";
-            this.btn_ht1.Size = new System.Drawing.Size(86, 27);
-            this.btn_ht1.TabIndex = 3;
-            this.btn_ht1.Text = "Hiển thị";
-            this.btn_ht1.UseVisualStyleBackColor = true;
-            this.btn_ht1.Click += new System.EventHandler(this.btn_ht1_Click);
-            // 
-            // txt_search1
-            // 
-            this.txt_search1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txt_search1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_search1.Location = new System.Drawing.Point(95, 4);
-            this.txt_search1.Name = "txt_search1";
-            this.txt_search1.Size = new System.Drawing.Size(209, 26);
-            this.txt_search1.TabIndex = 1;
-            // 
-            // btn_search1
-            // 
-            this.btn_search1.Location = new System.Drawing.Point(310, 3);
-            this.btn_search1.Name = "btn_search1";
-            this.btn_search1.Size = new System.Drawing.Size(85, 27);
-            this.btn_search1.TabIndex = 2;
-            this.btn_search1.Text = "Tìm kiếm";
-            this.btn_search1.UseVisualStyleBackColor = true;
-            this.btn_search1.Click += new System.EventHandler(this.btn_search1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.btn_ht2);
-            this.panel5.Controls.Add(this.txt_search2);
-            this.panel5.Controls.Add(this.btn_search2);
-            this.panel5.Location = new System.Drawing.Point(2, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(399, 35);
-            this.panel5.TabIndex = 1;
-            // 
-            // btn_ht2
-            // 
-            this.btn_ht2.Location = new System.Drawing.Point(3, 4);
-            this.btn_ht2.Name = "btn_ht2";
-            this.btn_ht2.Size = new System.Drawing.Size(86, 27);
-            this.btn_ht2.TabIndex = 3;
-            this.btn_ht2.Text = "Hiển thị";
-            this.btn_ht2.UseVisualStyleBackColor = true;
-            this.btn_ht2.Click += new System.EventHandler(this.btn_ht2_Click);
-            // 
-            // txt_search2
-            // 
-            this.txt_search2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txt_search2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_search2.Location = new System.Drawing.Point(95, 4);
-            this.txt_search2.Name = "txt_search2";
-            this.txt_search2.Size = new System.Drawing.Size(209, 26);
-            this.txt_search2.TabIndex = 1;
-            // 
-            // btn_search2
-            // 
-            this.btn_search2.Location = new System.Drawing.Point(310, 3);
-            this.btn_search2.Name = "btn_search2";
-            this.btn_search2.Size = new System.Drawing.Size(85, 27);
-            this.btn_search2.TabIndex = 2;
-            this.btn_search2.Text = "Tìm kiếm";
-            this.btn_search2.UseVisualStyleBackColor = true;
-            this.btn_search2.Click += new System.EventHandler(this.btn_search2_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.dgv_ds1);
-            this.panel6.Location = new System.Drawing.Point(3, 44);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(398, 156);
-            this.panel6.TabIndex = 2;
-            // 
-            // dgv_ds1
-            // 
-            this.dgv_ds1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ds1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_ds1.Location = new System.Drawing.Point(0, 0);
-            this.dgv_ds1.Name = "dgv_ds1";
-            this.dgv_ds1.Size = new System.Drawing.Size(398, 156);
-            this.dgv_ds1.TabIndex = 0;
-            this.dgv_ds1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds1_CellClick);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.dgv_ds2);
-            this.panel7.Location = new System.Drawing.Point(3, 41);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(398, 158);
-            this.panel7.TabIndex = 2;
-            // 
-            // dgv_ds2
-            // 
-            this.dgv_ds2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ds2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_ds2.Location = new System.Drawing.Point(0, 0);
-            this.dgv_ds2.Name = "dgv_ds2";
-            this.dgv_ds2.Size = new System.Drawing.Size(398, 158);
-            this.dgv_ds2.TabIndex = 0;
-            this.dgv_ds2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds2_CellClick);
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btn_luu1);
@@ -496,6 +369,77 @@
             this.btn_capnhat1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_capnhat1.UseVisualStyleBackColor = false;
             this.btn_capnhat1.Click += new System.EventHandler(this.btn_capnhat1_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.dgv_ds1);
+            this.panel6.Location = new System.Drawing.Point(3, 44);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(398, 156);
+            this.panel6.TabIndex = 2;
+            // 
+            // dgv_ds1
+            // 
+            this.dgv_ds1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ds1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_ds1.Location = new System.Drawing.Point(0, 0);
+            this.dgv_ds1.Name = "dgv_ds1";
+            this.dgv_ds1.ReadOnly = true;
+            this.dgv_ds1.Size = new System.Drawing.Size(398, 156);
+            this.dgv_ds1.TabIndex = 0;
+            this.dgv_ds1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds1_CellClick);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.btn_ht1);
+            this.panel4.Controls.Add(this.txt_search1);
+            this.panel4.Controls.Add(this.btn_search1);
+            this.panel4.Location = new System.Drawing.Point(2, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(399, 35);
+            this.panel4.TabIndex = 1;
+            // 
+            // btn_ht1
+            // 
+            this.btn_ht1.Location = new System.Drawing.Point(3, 4);
+            this.btn_ht1.Name = "btn_ht1";
+            this.btn_ht1.Size = new System.Drawing.Size(86, 27);
+            this.btn_ht1.TabIndex = 3;
+            this.btn_ht1.Text = "Hiển thị";
+            this.btn_ht1.UseVisualStyleBackColor = true;
+            this.btn_ht1.Click += new System.EventHandler(this.btn_ht1_Click);
+            // 
+            // txt_search1
+            // 
+            this.txt_search1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_search1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_search1.Location = new System.Drawing.Point(95, 4);
+            this.txt_search1.Name = "txt_search1";
+            this.txt_search1.Size = new System.Drawing.Size(209, 26);
+            this.txt_search1.TabIndex = 1;
+            // 
+            // btn_search1
+            // 
+            this.btn_search1.Location = new System.Drawing.Point(310, 3);
+            this.btn_search1.Name = "btn_search1";
+            this.btn_search1.Size = new System.Drawing.Size(85, 27);
+            this.btn_search1.TabIndex = 2;
+            this.btn_search1.Text = "Tìm kiếm";
+            this.btn_search1.UseVisualStyleBackColor = true;
+            this.btn_search1.Click += new System.EventHandler(this.btn_search1_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.panel9);
+            this.tabPage2.Controls.Add(this.panel7);
+            this.tabPage2.Controls.Add(this.panel5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(404, 262);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Dụng cụ y tế ngừng sử dụng";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel9
             // 
@@ -538,12 +482,69 @@
             this.btn_capnhat2.UseVisualStyleBackColor = false;
             this.btn_capnhat2.Click += new System.EventHandler(this.btn_capnhat2_Click);
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.dgv_ds2);
+            this.panel7.Location = new System.Drawing.Point(3, 41);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(398, 158);
+            this.panel7.TabIndex = 2;
+            // 
+            // dgv_ds2
+            // 
+            this.dgv_ds2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ds2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_ds2.Location = new System.Drawing.Point(0, 0);
+            this.dgv_ds2.Name = "dgv_ds2";
+            this.dgv_ds2.Size = new System.Drawing.Size(398, 158);
+            this.dgv_ds2.TabIndex = 0;
+            this.dgv_ds2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds2_CellClick);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btn_ht2);
+            this.panel5.Controls.Add(this.txt_search2);
+            this.panel5.Controls.Add(this.btn_search2);
+            this.panel5.Location = new System.Drawing.Point(2, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(399, 35);
+            this.panel5.TabIndex = 1;
+            // 
+            // btn_ht2
+            // 
+            this.btn_ht2.Location = new System.Drawing.Point(3, 4);
+            this.btn_ht2.Name = "btn_ht2";
+            this.btn_ht2.Size = new System.Drawing.Size(86, 27);
+            this.btn_ht2.TabIndex = 3;
+            this.btn_ht2.Text = "Hiển thị";
+            this.btn_ht2.UseVisualStyleBackColor = true;
+            this.btn_ht2.Click += new System.EventHandler(this.btn_ht2_Click);
+            // 
+            // txt_search2
+            // 
+            this.txt_search2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_search2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_search2.Location = new System.Drawing.Point(95, 4);
+            this.txt_search2.Name = "txt_search2";
+            this.txt_search2.Size = new System.Drawing.Size(209, 26);
+            this.txt_search2.TabIndex = 1;
+            // 
+            // btn_search2
+            // 
+            this.btn_search2.Location = new System.Drawing.Point(310, 3);
+            this.btn_search2.Name = "btn_search2";
+            this.btn_search2.Size = new System.Drawing.Size(85, 27);
+            this.btn_search2.TabIndex = 2;
+            this.btn_search2.Text = "Tìm kiếm";
+            this.btn_search2.UseVisualStyleBackColor = true;
+            this.btn_search2.Click += new System.EventHandler(this.btn_search2_Click);
+            // 
             // fr_dungcuyte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(819, 348);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -563,17 +564,17 @@
             this.panel3.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
             this.tag1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ds1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ds2)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

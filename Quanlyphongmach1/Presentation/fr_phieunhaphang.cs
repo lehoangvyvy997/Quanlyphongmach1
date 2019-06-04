@@ -319,24 +319,28 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dsphieunhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_ma.Text = dgv_dsphieunhap.Rows[dong].Cells[0].Value.ToString();
-            cbo_mancc.Text = dgv_dsphieunhap.Rows[dong].Cells[1].Value.ToString();
-            txt_sldm.Text = dgv_dsphieunhap.Rows[dong].Cells[2].Value.ToString();
-            dtm_ngay.Text = dgv_dsphieunhap.Rows[dong].Cells[3].Value.ToString();
-            txt_tien.Text = dgv_dsphieunhap.Rows[dong].Cells[4].Value.ToString();
-            txt_tinhtrang.Text = dgv_dsphieunhap.Rows[dong].Cells[5].Value.ToString();
 
-            maphieunhaphang = txt_ma.Text;
-            locktext();
-            if (txt_tinhtrang.Text == "Chưa nhập liệu"&& txt_ma.Text!="")
+            if(dong!=-1)
             {
-                btn_nhaplieu.Enabled = true;
-            }
-            else
-            {
-                btn_nhaplieu.Enabled = false;
-                btn_sua.Enabled = false;
-                btn_xoa.Enabled = false;
+                txt_ma.Text = dgv_dsphieunhap.Rows[dong].Cells[0].Value.ToString();
+                cbo_mancc.Text = dgv_dsphieunhap.Rows[dong].Cells[1].Value.ToString();
+                txt_sldm.Text = dgv_dsphieunhap.Rows[dong].Cells[2].Value.ToString();
+                dtm_ngay.Text = dgv_dsphieunhap.Rows[dong].Cells[3].Value.ToString();
+                txt_tien.Text = dgv_dsphieunhap.Rows[dong].Cells[4].Value.ToString();
+                txt_tinhtrang.Text = dgv_dsphieunhap.Rows[dong].Cells[5].Value.ToString();
+
+                maphieunhaphang = txt_ma.Text;
+                locktext();
+                if (txt_tinhtrang.Text == "Chưa nhập liệu" && txt_ma.Text != "")
+                {
+                    btn_nhaplieu.Enabled = true;
+                }
+                else
+                {
+                    btn_nhaplieu.Enabled = false;
+                    btn_sua.Enabled = false;
+                    btn_xoa.Enabled = false;
+                }
             }
         }
 

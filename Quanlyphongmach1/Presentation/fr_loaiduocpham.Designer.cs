@@ -62,7 +62,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(45, 8);
@@ -207,6 +207,7 @@
             this.dgv_dsloiduocpham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsloiduocpham.Location = new System.Drawing.Point(0, 0);
             this.dgv_dsloiduocpham.Name = "dgv_dsloiduocpham";
+            this.dgv_dsloiduocpham.ReadOnly = true;
             this.dgv_dsloiduocpham.Size = new System.Drawing.Size(401, 270);
             this.dgv_dsloiduocpham.TabIndex = 0;
             this.dgv_dsloiduocpham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsloiduocpham_CellClick);
@@ -216,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(404, 461);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

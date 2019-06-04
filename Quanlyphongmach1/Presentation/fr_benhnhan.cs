@@ -590,18 +590,22 @@ namespace Quanlyphongmach1.Presentation
         {
             
             dong = e.RowIndex;
-            txt_mabenhnhan.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            txt_tenbenhnhan.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
-            txt_tuoi.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
-            cbo_gioitinh.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
-            txt_socmnd.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
-            txt_diachi.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
-            txt_chuandoanbenh.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
 
-            dtm_ngaykham.Text = dgv_ds.Rows[dong].Cells[7].Value.ToString();
-            cbo_mapk1.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
-            cbo_mapk2.Text = dgv_ds.Rows[dong].Cells[10].Value.ToString();
-            cbo_mapk3.Text = dgv_ds.Rows[dong].Cells[12].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_mabenhnhan.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
+                txt_tenbenhnhan.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
+                txt_tuoi.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
+                cbo_gioitinh.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
+                txt_socmnd.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
+                txt_diachi.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
+                txt_chuandoanbenh.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
+
+                dtm_ngaykham.Text = dgv_ds.Rows[dong].Cells[7].Value.ToString();
+                cbo_mapk1.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
+                cbo_mapk2.Text = dgv_ds.Rows[dong].Cells[10].Value.ToString();
+                cbo_mapk3.Text = dgv_ds.Rows[dong].Cells[12].Value.ToString();
+            }
             
             locktext();
         }

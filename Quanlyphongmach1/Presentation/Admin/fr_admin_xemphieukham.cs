@@ -120,29 +120,32 @@ namespace Quanlyphongmach1.Presentation.Admin
         {
             dong = e.RowIndex;
 
-            txt_maphieukham.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            txt_tenbacsi.Text = load_tenbs(dgv_ds.Rows[dong].Cells[1].Value.ToString());
-            txt_chuandoan.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
-            txt_ngaykham.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
+           if(dong!=-1)
+            {
+                txt_maphieukham.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
+                txt_tenbacsi.Text = load_tenbs(dgv_ds.Rows[dong].Cells[1].Value.ToString());
+                txt_chuandoan.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
+                txt_ngaykham.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
 
-            if (dgv_ds.Rows[dong].Cells[5].Value.ToString() == "Có")
-                chk_kedon.Checked = true;
-            else
-                chk_kedon.Checked = false;
+                if (dgv_ds.Rows[dong].Cells[5].Value.ToString() == "Có")
+                    chk_kedon.Checked = true;
+                else
+                    chk_kedon.Checked = false;
 
-            if (dgv_ds.Rows[dong].Cells[7].Value.ToString() == "Có")
-                chk_dvkt.Checked = true;
-            else
-                chk_dvkt.Checked = false;
+                if (dgv_ds.Rows[dong].Cells[7].Value.ToString() == "Có")
+                    chk_dvkt.Checked = true;
+                else
+                    chk_dvkt.Checked = false;
 
-            if (dgv_ds.Rows[dong].Cells[9].Value.ToString() == "Có")
-                chk_dvsc.Checked = true;
-            else
-                chk_dvsc.Checked = false;
+                if (dgv_ds.Rows[dong].Cells[9].Value.ToString() == "Có")
+                    chk_dvsc.Checked = true;
+                else
+                    chk_dvsc.Checked = false;
 
-            lb_tienkedon.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
-            lb_tiendvkt.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
-            lb_tiendvsc.Text = dgv_ds.Rows[dong].Cells[10].Value.ToString();
+                lb_tienkedon.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
+                lb_tiendvkt.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
+                lb_tiendvsc.Text = dgv_ds.Rows[dong].Cells[10].Value.ToString();
+            }
         }
 
         private void btn_hienthi_Click(object sender, EventArgs e)

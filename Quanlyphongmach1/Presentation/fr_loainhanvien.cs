@@ -182,8 +182,13 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dsloainhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_maloainhanvien.Text = dgv_dsloainhanvien.Rows[dong].Cells[0].Value.ToString();
-            txt_tenloainhanvien.Text = dgv_dsloainhanvien.Rows[dong].Cells[1].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                txt_maloainhanvien.Text = dgv_dsloainhanvien.Rows[dong].Cells[0].Value.ToString();
+                txt_tenloainhanvien.Text = dgv_dsloainhanvien.Rows[dong].Cells[1].Value.ToString();
+            }
+
             locktext();
         }
     }

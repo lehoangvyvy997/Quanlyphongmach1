@@ -212,9 +212,14 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_ds_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_ma.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            txt_ten.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
-            txt_phsd.Text= dgv_ds.Rows[dong].Cells[2].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                txt_ma.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
+                txt_ten.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
+                txt_phsd.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
+            }
+
             locktext();
         }
 

@@ -67,7 +67,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -89,7 +89,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.txt_shmabenhnhan);
             this.panel2.Controls.Add(this.dtm_ngaylaphd);
             this.panel2.Controls.Add(this.label4);
@@ -166,7 +166,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel3.Controls.Add(this.txt_tiendvsc);
             this.panel3.Controls.Add(this.txt_ngaylaphd);
             this.panel3.Controls.Add(this.txt_sophieukham);
@@ -350,6 +350,7 @@
             this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds.Name = "dgv_ds";
+            this.dgv_ds.ReadOnly = true;
             this.dgv_ds.Size = new System.Drawing.Size(904, 403);
             this.dgv_ds.TabIndex = 15;
             this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);

@@ -34,6 +34,7 @@
             this.txt_cachdung = new System.Windows.Forms.TextBox();
             this.txt_congdung = new System.Windows.Forms.TextBox();
             this.txt_donvi = new System.Windows.Forms.TextBox();
+            this.txt_ma = new System.Windows.Forms.TextBox();
             this.txt_soluong = new System.Windows.Forms.TextBox();
             this.txt_tenthuoc = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -43,11 +44,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_hienthi = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.txt_shmaphieukham = new System.Windows.Forms.TextBox();
             this.btn_timkiem = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txt_ma = new System.Windows.Forms.TextBox();
+            this.btn_hienthi = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_dsctthk = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -80,7 +80,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel5.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel5.Controls.Add(this.txt_cachdung);
             this.panel5.Controls.Add(this.txt_congdung);
             this.panel5.Controls.Add(this.txt_donvi);
@@ -121,6 +121,15 @@
             this.txt_donvi.ReadOnly = true;
             this.txt_donvi.Size = new System.Drawing.Size(110, 26);
             this.txt_donvi.TabIndex = 11;
+            // 
+            // txt_ma
+            // 
+            this.txt_ma.Location = new System.Drawing.Point(89, 5);
+            this.txt_ma.Name = "txt_ma";
+            this.txt_ma.ReadOnly = true;
+            this.txt_ma.Size = new System.Drawing.Size(123, 26);
+            this.txt_ma.TabIndex = 11;
+            this.txt_ma.TextChanged += new System.EventHandler(this.txt_ma_TextChanged);
             // 
             // txt_soluong
             // 
@@ -194,7 +203,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txt_shmaphieukham);
             this.panel2.Controls.Add(this.btn_timkiem);
@@ -204,18 +213,14 @@
             this.panel2.Size = new System.Drawing.Size(624, 61);
             this.panel2.TabIndex = 16;
             // 
-            // btn_hienthi
+            // label2
             // 
-            this.btn_hienthi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_hienthi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_hienthi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_hienthi.Location = new System.Drawing.Point(55, 25);
-            this.btn_hienthi.Name = "btn_hienthi";
-            this.btn_hienthi.Size = new System.Drawing.Size(141, 33);
-            this.btn_hienthi.TabIndex = 0;
-            this.btn_hienthi.Text = "Hiển thị";
-            this.btn_hienthi.UseVisualStyleBackColor = false;
-            this.btn_hienthi.Click += new System.EventHandler(this.btn_hienthi_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(245, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Mã phiếu khám";
             // 
             // txt_shmaphieukham
             // 
@@ -237,23 +242,18 @@
             this.btn_timkiem.UseVisualStyleBackColor = false;
             this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
             // 
-            // label2
+            // btn_hienthi
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Mã phiếu khám";
-            // 
-            // txt_ma
-            // 
-            this.txt_ma.Location = new System.Drawing.Point(89, 5);
-            this.txt_ma.Name = "txt_ma";
-            this.txt_ma.ReadOnly = true;
-            this.txt_ma.Size = new System.Drawing.Size(123, 26);
-            this.txt_ma.TabIndex = 11;
-            this.txt_ma.TextChanged += new System.EventHandler(this.txt_ma_TextChanged);
+            this.btn_hienthi.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_hienthi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hienthi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_hienthi.Location = new System.Drawing.Point(55, 25);
+            this.btn_hienthi.Name = "btn_hienthi";
+            this.btn_hienthi.Size = new System.Drawing.Size(141, 33);
+            this.btn_hienthi.TabIndex = 0;
+            this.btn_hienthi.Text = "Hiển thị";
+            this.btn_hienthi.UseVisualStyleBackColor = false;
+            this.btn_hienthi.Click += new System.EventHandler(this.btn_hienthi_Click);
             // 
             // panel3
             // 
@@ -269,6 +269,7 @@
             this.dgv_dsctthk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsctthk.Location = new System.Drawing.Point(0, 0);
             this.dgv_dsctthk.Name = "dgv_dsctthk";
+            this.dgv_dsctthk.ReadOnly = true;
             this.dgv_dsctthk.Size = new System.Drawing.Size(624, 451);
             this.dgv_dsctthk.TabIndex = 0;
             this.dgv_dsctthk.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsctthk_CellClick);

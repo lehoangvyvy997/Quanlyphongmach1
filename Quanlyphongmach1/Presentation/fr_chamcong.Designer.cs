@@ -118,6 +118,7 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel4.Controls.Add(this.cbo_srhphong);
             this.panel4.Controls.Add(this.cbo_srhchuc);
             this.panel4.Controls.Add(this.cbo_srhloai);
@@ -241,13 +242,14 @@
             this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds.Name = "dgv_ds";
+            this.dgv_ds.ReadOnly = true;
             this.dgv_ds.Size = new System.Drawing.Size(929, 420);
             this.dgv_ds.TabIndex = 0;
             this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox1.Controls.Add(this.txt_tinhtrang);
             this.groupBox1.Controls.Add(this.txt_phongkham);
             this.groupBox1.Controls.Add(this.txt_chucvu);
@@ -536,7 +538,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(4, -4);
             this.groupBox3.Name = "groupBox3";

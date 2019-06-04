@@ -94,8 +94,11 @@ namespace Quanlyphongmach1.Presentation.Admin
         {
             dong = e.RowIndex;
 
-            txt_madv.Text = dgv_ktds.Rows[dong].Cells[1].Value.ToString();
-            txt_ktsolansd.Text = dgv_ktds.Rows[dong].Cells[2].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_madv.Text = dgv_ktds.Rows[dong].Cells[1].Value.ToString();
+                txt_ktsolansd.Text = dgv_ktds.Rows[dong].Cells[2].Value.ToString();
+            }
         }
 
         private void txt_madv_TextChanged(object sender, EventArgs e)

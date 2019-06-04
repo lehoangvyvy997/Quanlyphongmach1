@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_bnxemlichsu = new System.Windows.Forms.Button();
             this.txt_bnhoten = new System.Windows.Forms.TextBox();
             this.txt_bnsocmnd = new System.Windows.Forms.TextBox();
             this.txt_bnchuandoan = new System.Windows.Forms.TextBox();
@@ -78,7 +79,6 @@
             this.btn_pkluu = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.lb_title = new System.Windows.Forms.Label();
-            this.btn_bnxemlichsu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -123,6 +123,19 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin bệnh nhân";
+            // 
+            // btn_bnxemlichsu
+            // 
+            this.btn_bnxemlichsu.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_bnxemlichsu.Enabled = false;
+            this.btn_bnxemlichsu.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_bnxemlichsu.Location = new System.Drawing.Point(526, 55);
+            this.btn_bnxemlichsu.Name = "btn_bnxemlichsu";
+            this.btn_bnxemlichsu.Size = new System.Drawing.Size(161, 29);
+            this.btn_bnxemlichsu.TabIndex = 2;
+            this.btn_bnxemlichsu.Text = "Xem lịch sử BN";
+            this.btn_bnxemlichsu.UseVisualStyleBackColor = false;
+            this.btn_bnxemlichsu.Click += new System.EventHandler(this.btn_bnxemlichsu_Click);
             // 
             // txt_bnhoten
             // 
@@ -385,6 +398,7 @@
             this.dgv_bnds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_bnds.Location = new System.Drawing.Point(0, 0);
             this.dgv_bnds.Name = "dgv_bnds";
+            this.dgv_bnds.ReadOnly = true;
             this.dgv_bnds.Size = new System.Drawing.Size(695, 366);
             this.dgv_bnds.TabIndex = 0;
             this.dgv_bnds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_bnds_CellClick);
@@ -635,23 +649,11 @@
             this.lb_title.TabIndex = 0;
             this.lb_title.Text = "Phiếu Khám Răng - Hàm - Mặt";
             // 
-            // btn_bnxemlichsu
-            // 
-            this.btn_bnxemlichsu.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_bnxemlichsu.Enabled = false;
-            this.btn_bnxemlichsu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_bnxemlichsu.Location = new System.Drawing.Point(526, 55);
-            this.btn_bnxemlichsu.Name = "btn_bnxemlichsu";
-            this.btn_bnxemlichsu.Size = new System.Drawing.Size(161, 29);
-            this.btn_bnxemlichsu.TabIndex = 2;
-            this.btn_bnxemlichsu.Text = "Xem lịch sử BN";
-            this.btn_bnxemlichsu.UseVisualStyleBackColor = false;
-            this.btn_bnxemlichsu.Click += new System.EventHandler(this.btn_bnxemlichsu_Click);
-            // 
             // fr_phieukham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1350, 699);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel2);

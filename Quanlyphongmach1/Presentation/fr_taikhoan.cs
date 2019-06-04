@@ -273,13 +273,18 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dstaikhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_username.Text = dgv_dstaikhoan.Rows[dong].Cells[0].Value.ToString();
-            cbo_maloaitk.Text = dgv_dstaikhoan.Rows[dong].Cells[1].Value.ToString();
-            cbo_manhanvien.Text = dgv_dstaikhoan.Rows[dong].Cells[2].Value.ToString();
-            txt_password1.Text = dgv_dstaikhoan.Rows[dong].Cells[3].Value.ToString();
-            txt_password2.Text = dgv_dstaikhoan.Rows[dong].Cells[4].Value.ToString();
-            //cbmaque.Text = msds.Rows[dong].Cells[5].Value.ToString();
-            //txtdt.Text = msds.Rows[dong].Cells[6].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                txt_username.Text = dgv_dstaikhoan.Rows[dong].Cells[0].Value.ToString();
+                cbo_maloaitk.Text = dgv_dstaikhoan.Rows[dong].Cells[1].Value.ToString();
+                cbo_manhanvien.Text = dgv_dstaikhoan.Rows[dong].Cells[2].Value.ToString();
+                txt_password1.Text = dgv_dstaikhoan.Rows[dong].Cells[3].Value.ToString();
+                txt_password2.Text = dgv_dstaikhoan.Rows[dong].Cells[4].Value.ToString();
+                //cbmaque.Text = msds.Rows[dong].Cells[5].Value.ToString();
+                //txtdt.Text = msds.Rows[dong].Cells[6].Value.ToString();
+            }
+
             locktext();
         }
 

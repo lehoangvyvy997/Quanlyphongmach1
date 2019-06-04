@@ -99,9 +99,12 @@ namespace Quanlyphongmach1.Presentation.Admin
         {
             dong = e.RowIndex;
 
-            txt_ma.Text = dgv_dsctthk.Rows[dong].Cells[1].Value.ToString();
-            txt_soluong.Text = dgv_dsctthk.Rows[dong].Cells[2].Value.ToString();
-            txt_cachdung.Text = dgv_dsctthk.Rows[dong].Cells[3].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_ma.Text = dgv_dsctthk.Rows[dong].Cells[1].Value.ToString();
+                txt_soluong.Text = dgv_dsctthk.Rows[dong].Cells[2].Value.ToString();
+                txt_cachdung.Text = dgv_dsctthk.Rows[dong].Cells[3].Value.ToString();
+            }
         }
 
         private void txt_ma_TextChanged(object sender, EventArgs e)

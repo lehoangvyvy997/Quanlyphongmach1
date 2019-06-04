@@ -184,8 +184,13 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dstinhtranglv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_matinhtrang.Text = dgv_dstinhtranglv.Rows[dong].Cells[0].Value.ToString();
-            txt_tentinhtrang.Text = dgv_dstinhtranglv.Rows[dong].Cells[1].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                txt_matinhtrang.Text = dgv_dstinhtranglv.Rows[dong].Cells[0].Value.ToString();
+                txt_tentinhtrang.Text = dgv_dstinhtranglv.Rows[dong].Cells[1].Value.ToString();
+            }
+
             locktext();
         }
     }

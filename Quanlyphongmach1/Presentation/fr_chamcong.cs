@@ -184,16 +184,19 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            txt_maNV.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            txt_hoten.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
-            txt_ngaysinh.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
-            txt_gioitinh.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
-            txt_sdt.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
-            txt_mail.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
-            txt_tinhtrang.Text = "Đang làm việc";
-            txt_loaiNV.Text = thucthi.load_tenloaiNV(thucthi.load_maloaiNV(txt_maNV.Text));
-            txt_chucvu.Text = thucthi.load_tenCV(thucthi.load_maCV(txt_maNV.Text));
-            txt_phongkham.Text = thucthi.load_tenPGKH(thucthi.load_maPGKH(txt_maNV.Text));
+            if(dong!=-1)
+            {
+                txt_maNV.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
+                txt_hoten.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
+                txt_ngaysinh.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
+                txt_gioitinh.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
+                txt_sdt.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
+                txt_mail.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
+                txt_tinhtrang.Text = "Đang làm việc";
+                txt_loaiNV.Text = thucthi.load_tenloaiNV(thucthi.load_maloaiNV(txt_maNV.Text));
+                txt_chucvu.Text = thucthi.load_tenCV(thucthi.load_maCV(txt_maNV.Text));
+                txt_phongkham.Text = thucthi.load_tenPGKH(thucthi.load_maPGKH(txt_maNV.Text));
+            }
         }
 
         private void btn_srhhien_Click(object sender, EventArgs e)

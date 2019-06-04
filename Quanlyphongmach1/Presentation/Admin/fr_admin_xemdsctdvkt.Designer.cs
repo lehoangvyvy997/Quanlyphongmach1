@@ -30,13 +30,13 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.txt_ktphisd = new System.Windows.Forms.TextBox();
+            this.txt_madv = new System.Windows.Forms.TextBox();
             this.txt_ktsolansd = new System.Windows.Forms.TextBox();
             this.txt_kttendv = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.txt_madv = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_shmaphieukham = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel5.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel5.Controls.Add(this.txt_ktphisd);
             this.panel5.Controls.Add(this.txt_madv);
             this.panel5.Controls.Add(this.txt_ktsolansd);
@@ -78,6 +78,15 @@
             this.txt_ktphisd.ReadOnly = true;
             this.txt_ktphisd.Size = new System.Drawing.Size(181, 26);
             this.txt_ktphisd.TabIndex = 11;
+            // 
+            // txt_madv
+            // 
+            this.txt_madv.Location = new System.Drawing.Point(98, 5);
+            this.txt_madv.Name = "txt_madv";
+            this.txt_madv.ReadOnly = true;
+            this.txt_madv.Size = new System.Drawing.Size(114, 26);
+            this.txt_madv.TabIndex = 11;
+            this.txt_madv.TextChanged += new System.EventHandler(this.txt_madv_TextChanged);
             // 
             // txt_ktsolansd
             // 
@@ -132,18 +141,9 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "Mã dịch vụ:";
             // 
-            // txt_madv
-            // 
-            this.txt_madv.Location = new System.Drawing.Point(98, 5);
-            this.txt_madv.Name = "txt_madv";
-            this.txt_madv.ReadOnly = true;
-            this.txt_madv.Size = new System.Drawing.Size(114, 26);
-            this.txt_madv.TabIndex = 11;
-            this.txt_madv.TextChanged += new System.EventHandler(this.txt_madv_TextChanged);
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txt_shmaphieukham);
             this.panel2.Controls.Add(this.btn_timkiem);
@@ -198,7 +198,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -233,6 +233,7 @@
             this.dgv_ktds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ktds.Location = new System.Drawing.Point(0, 61);
             this.dgv_ktds.Name = "dgv_ktds";
+            this.dgv_ktds.ReadOnly = true;
             this.dgv_ktds.Size = new System.Drawing.Size(624, 515);
             this.dgv_ktds.TabIndex = 19;
             this.dgv_ktds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ktds_CellClick);

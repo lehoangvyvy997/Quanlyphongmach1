@@ -139,7 +139,10 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            cbo.Text = dgv.Rows[dong].Cells[3].Value.ToString();
+            if(dong!=-1)
+            {
+                cbo.Text = dgv.Rows[dong].Cells[3].Value.ToString();
+            }
             locktext();
         }
 

@@ -33,6 +33,8 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.txt_sccongdung = new System.Windows.Forms.TextBox();
             this.txt_scdonvi = new System.Windows.Forms.TextBox();
+            this.txt_scmadv = new System.Windows.Forms.TextBox();
+            this.txt_scmadp = new System.Windows.Forms.TextBox();
             this.txt_scsoluongdp = new System.Windows.Forms.TextBox();
             this.txt_sctendv = new System.Windows.Forms.TextBox();
             this.txt_sctendp = new System.Windows.Forms.TextBox();
@@ -43,8 +45,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.txt_scmadp = new System.Windows.Forms.TextBox();
-            this.txt_scmadv = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_shmaphieukham = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -83,7 +83,7 @@
             // 
             // panel9
             // 
-            this.panel9.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel9.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel9.Controls.Add(this.txt_sccongdung);
             this.panel9.Controls.Add(this.txt_scdonvi);
             this.panel9.Controls.Add(this.txt_scmadv);
@@ -121,6 +121,24 @@
             this.txt_scdonvi.ReadOnly = true;
             this.txt_scdonvi.Size = new System.Drawing.Size(110, 26);
             this.txt_scdonvi.TabIndex = 11;
+            // 
+            // txt_scmadv
+            // 
+            this.txt_scmadv.Location = new System.Drawing.Point(95, 3);
+            this.txt_scmadv.Name = "txt_scmadv";
+            this.txt_scmadv.ReadOnly = true;
+            this.txt_scmadv.Size = new System.Drawing.Size(123, 26);
+            this.txt_scmadv.TabIndex = 11;
+            this.txt_scmadv.TextChanged += new System.EventHandler(this.txt_scmadv_TextChanged);
+            // 
+            // txt_scmadp
+            // 
+            this.txt_scmadp.Location = new System.Drawing.Point(95, 35);
+            this.txt_scmadp.Name = "txt_scmadp";
+            this.txt_scmadp.ReadOnly = true;
+            this.txt_scmadp.Size = new System.Drawing.Size(123, 26);
+            this.txt_scmadp.TabIndex = 11;
+            this.txt_scmadp.TextChanged += new System.EventHandler(this.txt_scmadp_TextChanged);
             // 
             // txt_scsoluongdp
             // 
@@ -211,27 +229,9 @@
             this.label25.TabIndex = 0;
             this.label25.Text = "Mã d.phẩm:";
             // 
-            // txt_scmadp
-            // 
-            this.txt_scmadp.Location = new System.Drawing.Point(95, 35);
-            this.txt_scmadp.Name = "txt_scmadp";
-            this.txt_scmadp.ReadOnly = true;
-            this.txt_scmadp.Size = new System.Drawing.Size(123, 26);
-            this.txt_scmadp.TabIndex = 11;
-            this.txt_scmadp.TextChanged += new System.EventHandler(this.txt_scmadp_TextChanged);
-            // 
-            // txt_scmadv
-            // 
-            this.txt_scmadv.Location = new System.Drawing.Point(95, 3);
-            this.txt_scmadv.Name = "txt_scmadv";
-            this.txt_scmadv.ReadOnly = true;
-            this.txt_scmadv.Size = new System.Drawing.Size(123, 26);
-            this.txt_scmadv.TabIndex = 11;
-            this.txt_scmadv.TextChanged += new System.EventHandler(this.txt_scmadv_TextChanged);
-            // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txt_shmaphieukham);
             this.panel2.Controls.Add(this.btn_timkiem);
@@ -297,6 +297,7 @@
             this.dgv_scds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_scds.Location = new System.Drawing.Point(0, 0);
             this.dgv_scds.Name = "dgv_scds";
+            this.dgv_scds.ReadOnly = true;
             this.dgv_scds.Size = new System.Drawing.Size(624, 453);
             this.dgv_scds.TabIndex = 0;
             this.dgv_scds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_scds_CellClick);

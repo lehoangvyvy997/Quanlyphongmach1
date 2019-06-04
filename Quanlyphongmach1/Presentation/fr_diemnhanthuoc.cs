@@ -274,13 +274,16 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            txt_bnma.Text = dgv_dsBn.Rows[dong].Cells[0].Value.ToString();
-            txt_bnhoten.Text = dgv_dsBn.Rows[dong].Cells[1].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_bnma.Text = dgv_dsBn.Rows[dong].Cells[0].Value.ToString();
+                txt_bnhoten.Text = dgv_dsBn.Rows[dong].Cells[1].Value.ToString();
 
-            txt_bntuoi.Text = dgv_dsBn.Rows[dong].Cells[2].Value.ToString();
-            txt_bngioitinh.Text = dgv_dsBn.Rows[dong].Cells[3].Value.ToString();
-            txt_bnsocmnd.Text = dgv_dsBn.Rows[dong].Cells[4].Value.ToString();
-            txt_bnchuandoan.Text = dgv_dsBn.Rows[dong].Cells[6].Value.ToString();
+                txt_bntuoi.Text = dgv_dsBn.Rows[dong].Cells[2].Value.ToString();
+                txt_bngioitinh.Text = dgv_dsBn.Rows[dong].Cells[3].Value.ToString();
+                txt_bnsocmnd.Text = dgv_dsBn.Rows[dong].Cells[4].Value.ToString();
+                txt_bnchuandoan.Text = dgv_dsBn.Rows[dong].Cells[6].Value.ToString();
+            }
         }
 
         private void btn_thuocthaythe_Click(object sender, EventArgs e)

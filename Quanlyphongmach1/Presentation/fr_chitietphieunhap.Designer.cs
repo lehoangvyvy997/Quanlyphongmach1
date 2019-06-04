@@ -63,6 +63,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_luu = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_themmoi = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_ds = new System.Windows.Forms.DataGridView();
             this.lb_stt = new System.Windows.Forms.Label();
@@ -70,10 +74,6 @@
             this.txt_soluongda = new System.Windows.Forms.TextBox();
             this.txt_soluongcan = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.btn_luu = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
-            this.btn_themmoi = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -94,7 +94,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(228, 7);
             this.label1.Name = "label1";
@@ -436,78 +436,6 @@
             this.panel4.Size = new System.Drawing.Size(411, 50);
             this.panel4.TabIndex = 6;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.dgv_ds);
-            this.panel3.Location = new System.Drawing.Point(414, 47);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(409, 421);
-            this.panel3.TabIndex = 7;
-            // 
-            // dgv_ds
-            // 
-            this.dgv_ds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_ds.Location = new System.Drawing.Point(0, 0);
-            this.dgv_ds.Name = "dgv_ds";
-            this.dgv_ds.Size = new System.Drawing.Size(409, 421);
-            this.dgv_ds.TabIndex = 0;
-            this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);
-            // 
-            // lb_stt
-            // 
-            this.lb_stt.AutoSize = true;
-            this.lb_stt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_stt.Location = new System.Drawing.Point(412, 554);
-            this.lb_stt.Name = "lb_stt";
-            this.lb_stt.Size = new System.Drawing.Size(141, 16);
-            this.lb_stt.TabIndex = 8;
-            this.lb_stt.Text = "Số danh mục đã nhập:";
-            // 
-            // btn_luunhaplieu
-            // 
-            this.btn_luunhaplieu.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_luunhaplieu.Location = new System.Drawing.Point(621, 525);
-            this.btn_luunhaplieu.Name = "btn_luunhaplieu";
-            this.btn_luunhaplieu.Size = new System.Drawing.Size(202, 49);
-            this.btn_luunhaplieu.TabIndex = 9;
-            this.btn_luunhaplieu.Text = "Lưu nhập liệu";
-            this.btn_luunhaplieu.UseVisualStyleBackColor = false;
-            this.btn_luunhaplieu.Click += new System.EventHandler(this.btn_luunhaplieu_Click);
-            // 
-            // txt_soluongda
-            // 
-            this.txt_soluongda.Enabled = false;
-            this.txt_soluongda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_soluongda.Location = new System.Drawing.Point(556, 551);
-            this.txt_soluongda.Name = "txt_soluongda";
-            this.txt_soluongda.ReadOnly = true;
-            this.txt_soluongda.Size = new System.Drawing.Size(61, 22);
-            this.txt_soluongda.TabIndex = 10;
-            this.txt_soluongda.Text = "0";
-            this.txt_soluongda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txt_soluongcan
-            // 
-            this.txt_soluongcan.Enabled = false;
-            this.txt_soluongcan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_soluongcan.Location = new System.Drawing.Point(556, 526);
-            this.txt_soluongcan.Name = "txt_soluongcan";
-            this.txt_soluongcan.ReadOnly = true;
-            this.txt_soluongcan.Size = new System.Drawing.Size(61, 22);
-            this.txt_soluongcan.TabIndex = 10;
-            this.txt_soluongcan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(412, 529);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(147, 16);
-            this.label17.TabIndex = 8;
-            this.label17.Text = "Số danh mục cần nhập:";
-            // 
             // btn_luu
             // 
             this.btn_luu.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -572,11 +500,84 @@
             this.btn_sua.UseVisualStyleBackColor = false;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.dgv_ds);
+            this.panel3.Location = new System.Drawing.Point(414, 47);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(409, 421);
+            this.panel3.TabIndex = 7;
+            // 
+            // dgv_ds
+            // 
+            this.dgv_ds.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_ds.Location = new System.Drawing.Point(0, 0);
+            this.dgv_ds.Name = "dgv_ds";
+            this.dgv_ds.ReadOnly = true;
+            this.dgv_ds.Size = new System.Drawing.Size(409, 421);
+            this.dgv_ds.TabIndex = 0;
+            this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);
+            // 
+            // lb_stt
+            // 
+            this.lb_stt.AutoSize = true;
+            this.lb_stt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_stt.Location = new System.Drawing.Point(412, 554);
+            this.lb_stt.Name = "lb_stt";
+            this.lb_stt.Size = new System.Drawing.Size(141, 16);
+            this.lb_stt.TabIndex = 8;
+            this.lb_stt.Text = "Số danh mục đã nhập:";
+            // 
+            // btn_luunhaplieu
+            // 
+            this.btn_luunhaplieu.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btn_luunhaplieu.Location = new System.Drawing.Point(621, 525);
+            this.btn_luunhaplieu.Name = "btn_luunhaplieu";
+            this.btn_luunhaplieu.Size = new System.Drawing.Size(202, 49);
+            this.btn_luunhaplieu.TabIndex = 9;
+            this.btn_luunhaplieu.Text = "Lưu nhập liệu";
+            this.btn_luunhaplieu.UseVisualStyleBackColor = false;
+            this.btn_luunhaplieu.Click += new System.EventHandler(this.btn_luunhaplieu_Click);
+            // 
+            // txt_soluongda
+            // 
+            this.txt_soluongda.Enabled = false;
+            this.txt_soluongda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_soluongda.Location = new System.Drawing.Point(556, 551);
+            this.txt_soluongda.Name = "txt_soluongda";
+            this.txt_soluongda.ReadOnly = true;
+            this.txt_soluongda.Size = new System.Drawing.Size(61, 22);
+            this.txt_soluongda.TabIndex = 10;
+            this.txt_soluongda.Text = "0";
+            this.txt_soluongda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_soluongcan
+            // 
+            this.txt_soluongcan.Enabled = false;
+            this.txt_soluongcan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_soluongcan.Location = new System.Drawing.Point(556, 526);
+            this.txt_soluongcan.Name = "txt_soluongcan";
+            this.txt_soluongcan.ReadOnly = true;
+            this.txt_soluongcan.Size = new System.Drawing.Size(61, 22);
+            this.txt_soluongcan.TabIndex = 10;
+            this.txt_soluongcan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(412, 529);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(147, 16);
+            this.label17.TabIndex = 8;
+            this.label17.Text = "Số danh mục cần nhập:";
+            // 
             // fr_chitietphieunhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(825, 575);
             this.Controls.Add(this.txt_soluongcan);
             this.Controls.Add(this.txt_soluongda);

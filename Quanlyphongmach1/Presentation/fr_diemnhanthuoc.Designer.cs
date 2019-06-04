@@ -67,7 +67,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -108,6 +108,7 @@
             this.dgv_dsBn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsBn.Location = new System.Drawing.Point(0, 0);
             this.dgv_dsBn.Name = "dgv_dsBn";
+            this.dgv_dsBn.ReadOnly = true;
             this.dgv_dsBn.Size = new System.Drawing.Size(663, 473);
             this.dgv_dsBn.TabIndex = 0;
             this.dgv_dsBn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_dsBn_CellClick);
@@ -309,6 +310,7 @@
             this.dgv_dsthuoc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_dsthuoc.Location = new System.Drawing.Point(3, 22);
             this.dgv_dsthuoc.Name = "dgv_dsthuoc";
+            this.dgv_dsthuoc.ReadOnly = true;
             this.dgv_dsthuoc.Size = new System.Drawing.Size(669, 536);
             this.dgv_dsthuoc.TabIndex = 0;
             // 
@@ -354,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(1350, 699);
             this.Controls.Add(this.btn_luu);
             this.Controls.Add(this.btn_in);

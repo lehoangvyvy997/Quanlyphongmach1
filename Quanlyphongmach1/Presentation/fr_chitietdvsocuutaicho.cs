@@ -117,9 +117,12 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            cbo_scmadv.Text = dgv_scds.Rows[dong].Cells[2].Value.ToString();
-            cbo_scmadp.Text = dgv_scds.Rows[dong].Cells[1].Value.ToString();
-            txt_scsoluongdp.Text = dgv_scds.Rows[dong].Cells[3].Value.ToString();
+            if(dong!=-1)
+            {
+                cbo_scmadv.Text = dgv_scds.Rows[dong].Cells[2].Value.ToString();
+                cbo_scmadp.Text = dgv_scds.Rows[dong].Cells[1].Value.ToString();
+                txt_scsoluongdp.Text = dgv_scds.Rows[dong].Cells[3].Value.ToString();
+            }
 
             locktext();
         }

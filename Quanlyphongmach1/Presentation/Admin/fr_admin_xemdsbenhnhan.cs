@@ -155,8 +155,11 @@ namespace Quanlyphongmach1.Presentation.Admin
         private void dgv_ds_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_hoten.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
-            txt_socmnd.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_hoten.Text = dgv_ds.Rows[dong].Cells[1].Value.ToString();
+                txt_socmnd.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
+            }
         }
 
         private void btn_hienthi_Click(object sender, EventArgs e)

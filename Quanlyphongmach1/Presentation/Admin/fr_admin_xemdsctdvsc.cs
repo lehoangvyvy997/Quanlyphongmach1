@@ -102,9 +102,12 @@ namespace Quanlyphongmach1.Presentation.Admin
         {
             dong = e.RowIndex;
 
-            txt_scmadv.Text = dgv_scds.Rows[dong].Cells[2].Value.ToString();
-            txt_scmadp.Text = dgv_scds.Rows[dong].Cells[1].Value.ToString();
-            txt_scsoluongdp.Text = dgv_scds.Rows[dong].Cells[3].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_scmadv.Text = dgv_scds.Rows[dong].Cells[2].Value.ToString();
+                txt_scmadp.Text = dgv_scds.Rows[dong].Cells[1].Value.ToString();
+                txt_scsoluongdp.Text = dgv_scds.Rows[dong].Cells[3].Value.ToString();
+            }
         }
 
         private void fr_admin_xemdsctdvsc_Load(object sender, EventArgs e)

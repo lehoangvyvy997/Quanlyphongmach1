@@ -425,6 +425,7 @@
             this.dgv_ds1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds1.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds1.Name = "dgv_ds1";
+            this.dgv_ds1.ReadOnly = true;
             this.dgv_ds1.Size = new System.Drawing.Size(399, 218);
             this.dgv_ds1.TabIndex = 17;
             this.dgv_ds1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds1_CellClick);
@@ -542,7 +543,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(819, 404);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);

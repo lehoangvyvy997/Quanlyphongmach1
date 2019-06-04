@@ -79,6 +79,7 @@
             this.dgv_ktds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ktds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ktds.Name = "dgv_ktds";
+            this.dgv_ktds.ReadOnly = true;
             this.dgv_ktds.Size = new System.Drawing.Size(615, 289);
             this.dgv_ktds.TabIndex = 0;
             this.dgv_ktds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ktds_CellClick);

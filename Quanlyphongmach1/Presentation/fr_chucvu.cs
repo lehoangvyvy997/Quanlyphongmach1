@@ -186,8 +186,11 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_dschucvu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            txt_machucvu.Text = dgv_dschucvu.Rows[dong].Cells[0].Value.ToString();
-            txt_tenchucvu.Text = dgv_dschucvu.Rows[dong].Cells[1].Value.ToString();
+            if(dong!=-1)
+            {
+                txt_machucvu.Text = dgv_dschucvu.Rows[dong].Cells[0].Value.ToString();
+                txt_tenchucvu.Text = dgv_dschucvu.Rows[dong].Cells[1].Value.ToString();
+            }
             locktext();
         }
     }

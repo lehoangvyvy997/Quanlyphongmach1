@@ -31,7 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dtm = new System.Windows.Forms.DateTimePicker();
+            this.btn_tim = new System.Windows.Forms.Button();
+            this.btn_hienthi = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lb_tiendvsc = new System.Windows.Forms.Label();
+            this.lb_tiendvkt = new System.Windows.Forms.Label();
+            this.lb_tienkedon = new System.Windows.Forms.Label();
             this.chk_dvsc = new System.Windows.Forms.CheckBox();
             this.chk_dvkt = new System.Windows.Forms.CheckBox();
             this.chk_kedon = new System.Windows.Forms.CheckBox();
@@ -43,12 +49,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lb_tienkedon = new System.Windows.Forms.Label();
-            this.lb_tiendvkt = new System.Windows.Forms.Label();
-            this.lb_tiendvsc = new System.Windows.Forms.Label();
-            this.btn_hienthi = new System.Windows.Forms.Button();
-            this.dtm = new System.Windows.Forms.DateTimePicker();
-            this.btn_tim = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_ds = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -81,7 +81,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel2.Controls.Add(this.dtm);
             this.panel2.Controls.Add(this.btn_tim);
             this.panel2.Controls.Add(this.btn_hienthi);
@@ -90,9 +90,44 @@
             this.panel2.Size = new System.Drawing.Size(904, 44);
             this.panel2.TabIndex = 15;
             // 
+            // dtm
+            // 
+            this.dtm.CustomFormat = "dd/MM/yyyy";
+            this.dtm.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtm.Location = new System.Drawing.Point(371, 6);
+            this.dtm.Name = "dtm";
+            this.dtm.Size = new System.Drawing.Size(132, 26);
+            this.dtm.TabIndex = 1;
+            // 
+            // btn_tim
+            // 
+            this.btn_tim.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tim.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_tim.Location = new System.Drawing.Point(539, 3);
+            this.btn_tim.Name = "btn_tim";
+            this.btn_tim.Size = new System.Drawing.Size(174, 33);
+            this.btn_tim.TabIndex = 0;
+            this.btn_tim.Text = "Hiển thị theo ngày";
+            this.btn_tim.UseVisualStyleBackColor = false;
+            this.btn_tim.Click += new System.EventHandler(this.btn_tim_Click);
+            // 
+            // btn_hienthi
+            // 
+            this.btn_hienthi.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_hienthi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hienthi.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_hienthi.Location = new System.Drawing.Point(204, 5);
+            this.btn_hienthi.Name = "btn_hienthi";
+            this.btn_hienthi.Size = new System.Drawing.Size(130, 33);
+            this.btn_hienthi.TabIndex = 0;
+            this.btn_hienthi.Text = "Hiển thị";
+            this.btn_hienthi.UseVisualStyleBackColor = false;
+            this.btn_hienthi.Click += new System.EventHandler(this.btn_hienthi_Click);
+            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel3.Controls.Add(this.lb_tiendvsc);
             this.panel3.Controls.Add(this.lb_tiendvkt);
             this.panel3.Controls.Add(this.lb_tienkedon);
@@ -112,6 +147,33 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(904, 147);
             this.panel3.TabIndex = 16;
+            // 
+            // lb_tiendvsc
+            // 
+            this.lb_tiendvsc.AutoSize = true;
+            this.lb_tiendvsc.Location = new System.Drawing.Point(655, 118);
+            this.lb_tiendvsc.Name = "lb_tiendvsc";
+            this.lb_tiendvsc.Size = new System.Drawing.Size(14, 20);
+            this.lb_tiendvsc.TabIndex = 3;
+            this.lb_tiendvsc.Text = "-";
+            // 
+            // lb_tiendvkt
+            // 
+            this.lb_tiendvkt.AutoSize = true;
+            this.lb_tiendvkt.Location = new System.Drawing.Point(386, 118);
+            this.lb_tiendvkt.Name = "lb_tiendvkt";
+            this.lb_tiendvkt.Size = new System.Drawing.Size(14, 20);
+            this.lb_tiendvkt.TabIndex = 3;
+            this.lb_tiendvkt.Text = "-";
+            // 
+            // lb_tienkedon
+            // 
+            this.lb_tienkedon.AutoSize = true;
+            this.lb_tienkedon.Location = new System.Drawing.Point(146, 118);
+            this.lb_tienkedon.Name = "lb_tienkedon";
+            this.lb_tienkedon.Size = new System.Drawing.Size(14, 20);
+            this.lb_tienkedon.TabIndex = 3;
+            this.lb_tienkedon.Text = "-";
             // 
             // chk_dvsc
             // 
@@ -214,68 +276,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã phiếu khám:";
             // 
-            // lb_tienkedon
-            // 
-            this.lb_tienkedon.AutoSize = true;
-            this.lb_tienkedon.Location = new System.Drawing.Point(146, 118);
-            this.lb_tienkedon.Name = "lb_tienkedon";
-            this.lb_tienkedon.Size = new System.Drawing.Size(14, 20);
-            this.lb_tienkedon.TabIndex = 3;
-            this.lb_tienkedon.Text = "-";
-            // 
-            // lb_tiendvkt
-            // 
-            this.lb_tiendvkt.AutoSize = true;
-            this.lb_tiendvkt.Location = new System.Drawing.Point(386, 118);
-            this.lb_tiendvkt.Name = "lb_tiendvkt";
-            this.lb_tiendvkt.Size = new System.Drawing.Size(14, 20);
-            this.lb_tiendvkt.TabIndex = 3;
-            this.lb_tiendvkt.Text = "-";
-            // 
-            // lb_tiendvsc
-            // 
-            this.lb_tiendvsc.AutoSize = true;
-            this.lb_tiendvsc.Location = new System.Drawing.Point(655, 118);
-            this.lb_tiendvsc.Name = "lb_tiendvsc";
-            this.lb_tiendvsc.Size = new System.Drawing.Size(14, 20);
-            this.lb_tiendvsc.TabIndex = 3;
-            this.lb_tiendvsc.Text = "-";
-            // 
-            // btn_hienthi
-            // 
-            this.btn_hienthi.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_hienthi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_hienthi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_hienthi.Location = new System.Drawing.Point(204, 5);
-            this.btn_hienthi.Name = "btn_hienthi";
-            this.btn_hienthi.Size = new System.Drawing.Size(130, 33);
-            this.btn_hienthi.TabIndex = 0;
-            this.btn_hienthi.Text = "Hiển thị";
-            this.btn_hienthi.UseVisualStyleBackColor = false;
-            this.btn_hienthi.Click += new System.EventHandler(this.btn_hienthi_Click);
-            // 
-            // dtm
-            // 
-            this.dtm.CustomFormat = "dd/MM/yyyy";
-            this.dtm.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtm.Location = new System.Drawing.Point(371, 6);
-            this.dtm.Name = "dtm";
-            this.dtm.Size = new System.Drawing.Size(132, 26);
-            this.dtm.TabIndex = 1;
-            // 
-            // btn_tim
-            // 
-            this.btn_tim.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tim.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_tim.Location = new System.Drawing.Point(539, 3);
-            this.btn_tim.Name = "btn_tim";
-            this.btn_tim.Size = new System.Drawing.Size(174, 33);
-            this.btn_tim.TabIndex = 0;
-            this.btn_tim.Text = "Hiển thị theo ngày";
-            this.btn_tim.UseVisualStyleBackColor = false;
-            this.btn_tim.Click += new System.EventHandler(this.btn_tim_Click);
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.dgv_ds);
@@ -290,6 +290,7 @@
             this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds.Name = "dgv_ds";
+            this.dgv_ds.ReadOnly = true;
             this.dgv_ds.Size = new System.Drawing.Size(904, 453);
             this.dgv_ds.TabIndex = 0;
             this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);

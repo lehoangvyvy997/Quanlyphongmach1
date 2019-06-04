@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_tim = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_srhten = new System.Windows.Forms.TextBox();
             this.dtm = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbo = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_luu = new System.Windows.Forms.Button();
-            this.txt_srhten = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_tim = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbo = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -49,7 +49,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox1.Controls.Add(this.btn_tim);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -62,6 +62,44 @@
             this.groupBox1.Size = new System.Drawing.Size(763, 50);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // btn_tim
+            // 
+            this.btn_tim.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btn_tim.Location = new System.Drawing.Point(653, 15);
+            this.btn_tim.Name = "btn_tim";
+            this.btn_tim.Size = new System.Drawing.Size(89, 29);
+            this.btn_tim.TabIndex = 4;
+            this.btn_tim.Text = "Tìm kiếm";
+            this.btn_tim.UseVisualStyleBackColor = false;
+            this.btn_tim.Click += new System.EventHandler(this.btn_tim_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Ngày:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(397, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên:";
+            // 
+            // txt_srhten
+            // 
+            this.txt_srhten.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_srhten.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_srhten.Location = new System.Drawing.Point(440, 16);
+            this.txt_srhten.Name = "txt_srhten";
+            this.txt_srhten.Size = new System.Drawing.Size(191, 26);
+            this.txt_srhten.TabIndex = 1;
             // 
             // dtm
             // 
@@ -84,13 +122,14 @@
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.Location = new System.Drawing.Point(0, 0);
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
             this.dgv.Size = new System.Drawing.Size(763, 507);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.SkyBlue;
+            this.groupBox2.BackColor = System.Drawing.Color.PaleTurquoise;
             this.groupBox2.Controls.Add(this.btn_sua);
             this.groupBox2.Controls.Add(this.btn_luu);
             this.groupBox2.Controls.Add(this.label1);
@@ -100,29 +139,6 @@
             this.groupBox2.Size = new System.Drawing.Size(763, 57);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            // 
-            // cbo
-            // 
-            this.cbo.FormattingEnabled = true;
-            this.cbo.Items.AddRange(new object[] {
-            "Không phép",
-            "Có phép"});
-            this.cbo.Location = new System.Drawing.Point(155, 21);
-            this.cbo.Name = "cbo";
-            this.cbo.Size = new System.Drawing.Size(188, 28);
-            this.cbo.TabIndex = 0;
-            this.cbo.Text = "Không phép";
-            this.cbo.TextChanged += new System.EventHandler(this.cbo_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tình trạng nghỉ:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_sua
             // 
@@ -154,43 +170,28 @@
             this.btn_luu.UseVisualStyleBackColor = false;
             this.btn_luu.Click += new System.EventHandler(this.btn_luu_Click);
             // 
-            // txt_srhten
+            // label1
             // 
-            this.txt_srhten.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txt_srhten.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txt_srhten.Location = new System.Drawing.Point(440, 16);
-            this.txt_srhten.Name = "txt_srhten";
-            this.txt_srhten.Size = new System.Drawing.Size(191, 26);
-            this.txt_srhten.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tình trạng nghỉ:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // cbo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(397, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tên:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Ngày:";
-            // 
-            // btn_tim
-            // 
-            this.btn_tim.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btn_tim.Location = new System.Drawing.Point(653, 15);
-            this.btn_tim.Name = "btn_tim";
-            this.btn_tim.Size = new System.Drawing.Size(89, 29);
-            this.btn_tim.TabIndex = 4;
-            this.btn_tim.Text = "Tìm kiếm";
-            this.btn_tim.UseVisualStyleBackColor = false;
-            this.btn_tim.Click += new System.EventHandler(this.btn_tim_Click);
+            this.cbo.FormattingEnabled = true;
+            this.cbo.Items.AddRange(new object[] {
+            "Không phép",
+            "Có phép"});
+            this.cbo.Location = new System.Drawing.Point(155, 21);
+            this.cbo.Name = "cbo";
+            this.cbo.Size = new System.Drawing.Size(188, 28);
+            this.cbo.TabIndex = 0;
+            this.cbo.Text = "Không phép";
+            this.cbo.TextChanged += new System.EventHandler(this.cbo_TextChanged);
             // 
             // fr_chamcong_edit
             // 

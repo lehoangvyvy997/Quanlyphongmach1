@@ -38,12 +38,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.txt_ma = new System.Windows.Forms.TextBox();
+            this.lb_hhd = new System.Windows.Forms.Label();
             this.lb_hd = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_ds = new System.Windows.Forms.DataGridView();
-            this.lb_hhd = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(69, 9);
@@ -177,6 +177,16 @@
             this.txt_ma.Size = new System.Drawing.Size(250, 27);
             this.txt_ma.TabIndex = 1;
             // 
+            // lb_hhd
+            // 
+            this.lb_hhd.AutoSize = true;
+            this.lb_hhd.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hhd.Location = new System.Drawing.Point(192, 77);
+            this.lb_hhd.Name = "lb_hhd";
+            this.lb_hhd.Size = new System.Drawing.Size(122, 19);
+            this.lb_hhd.TabIndex = 2;
+            this.lb_hhd.Text = "Hiệu hàng đợi: 0";
+            // 
             // lb_hd
             // 
             this.lb_hd.AutoSize = true;
@@ -221,26 +231,17 @@
             this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds.Name = "dgv_ds";
+            this.dgv_ds.ReadOnly = true;
             this.dgv_ds.Size = new System.Drawing.Size(402, 234);
             this.dgv_ds.TabIndex = 0;
             this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);
-            // 
-            // lb_hhd
-            // 
-            this.lb_hhd.AutoSize = true;
-            this.lb_hhd.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hhd.Location = new System.Drawing.Point(192, 77);
-            this.lb_hhd.Name = "lb_hhd";
-            this.lb_hhd.Size = new System.Drawing.Size(122, 19);
-            this.lb_hhd.TabIndex = 2;
-            this.lb_hhd.Text = "Hiệu hàng đợi: 0";
             // 
             // fr_phongkham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(404, 445);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

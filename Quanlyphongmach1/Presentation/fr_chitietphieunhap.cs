@@ -326,15 +326,19 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_ds_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-            cbo_maldp.Text=dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            cbo_ma.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
+            
+            if(dong!=-1)
+            {
+                cbo_maldp.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
+                cbo_ma.Text = dgv_ds.Rows[dong].Cells[2].Value.ToString();
 
-            txt_ten.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
-            cbo_dv.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
-            txt_cd.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
-            dtm_ngay.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
-            txt_gianhap.Text = dgv_ds.Rows[dong].Cells[7].Value.ToString();
-            txt_sl.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
+                txt_ten.Text = dgv_ds.Rows[dong].Cells[3].Value.ToString();
+                cbo_dv.Text = dgv_ds.Rows[dong].Cells[4].Value.ToString();
+                txt_cd.Text = dgv_ds.Rows[dong].Cells[5].Value.ToString();
+                dtm_ngay.Text = dgv_ds.Rows[dong].Cells[6].Value.ToString();
+                txt_gianhap.Text = dgv_ds.Rows[dong].Cells[7].Value.ToString();
+                txt_sl.Text = dgv_ds.Rows[dong].Cells[8].Value.ToString();
+            }
             
             locktext();
         }

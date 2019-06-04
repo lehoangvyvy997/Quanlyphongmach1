@@ -109,8 +109,11 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            cbo_ktmadv.Text = dgv_ktds.Rows[dong].Cells[1].Value.ToString();
-            txt_ktsolansd.Text = dgv_ktds.Rows[dong].Cells[2].Value.ToString();
+            if(dong!=-1)
+            {
+                cbo_ktmadv.Text = dgv_ktds.Rows[dong].Cells[1].Value.ToString();
+                txt_ktsolansd.Text = dgv_ktds.Rows[dong].Cells[2].Value.ToString();
+            }
 
             locktext();
         }

@@ -195,12 +195,15 @@ namespace Quanlyphongmach1.Presentation
         {
             dong_bn = e.RowIndex;
             //txt_mabenhnhan.Text = dgv_ds.Rows[dong].Cells[0].Value.ToString();
-            txt_bnma.Text = dgv_bnds.Rows[dong_bn].Cells[1].Value.ToString();
-            txt_bnhoten.Text = dgv_bnds.Rows[dong_bn].Cells[2].Value.ToString();
-            txt_bntuoi.Text = dgv_bnds.Rows[dong_bn].Cells[3].Value.ToString();
-            txt_bngioitinh.Text = dgv_bnds.Rows[dong_bn].Cells[4].Value.ToString();
-            txt_bnsocmnd.Text = dgv_bnds.Rows[dong_bn].Cells[5].Value.ToString();
-            txt_bnchuandoan.Text = dgv_bnds.Rows[dong_bn].Cells[6].Value.ToString();
+            if(dong_bn!=-1)
+            {
+                txt_bnma.Text = dgv_bnds.Rows[dong_bn].Cells[1].Value.ToString();
+                txt_bnhoten.Text = dgv_bnds.Rows[dong_bn].Cells[2].Value.ToString();
+                txt_bntuoi.Text = dgv_bnds.Rows[dong_bn].Cells[3].Value.ToString();
+                txt_bngioitinh.Text = dgv_bnds.Rows[dong_bn].Cells[4].Value.ToString();
+                txt_bnsocmnd.Text = dgv_bnds.Rows[dong_bn].Cells[5].Value.ToString();
+                txt_bnchuandoan.Text = dgv_bnds.Rows[dong_bn].Cells[6].Value.ToString();
+            }
 
 
         }
@@ -272,6 +275,7 @@ namespace Quanlyphongmach1.Presentation
             locktext_pk();
             // load Lable
             lb_title.Text = "Phiếu Khám " + Key;
+
             lb_sohangdoi.Text = "Tổng số hàng đợi: " + load_sohangdoi().ToString();
             lb_stting.Text = "STT đang được điều trị:" + load_sohieuhangdoi().ToString();
             //hiển thị danh sách bệnh nhân với phòng khám đang thự thi

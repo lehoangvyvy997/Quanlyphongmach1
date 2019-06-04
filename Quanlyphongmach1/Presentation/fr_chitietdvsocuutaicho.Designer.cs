@@ -85,6 +85,7 @@
             this.dgv_scds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_scds.Location = new System.Drawing.Point(0, 0);
             this.dgv_scds.Name = "dgv_scds";
+            this.dgv_scds.ReadOnly = true;
             this.dgv_scds.Size = new System.Drawing.Size(615, 284);
             this.dgv_scds.TabIndex = 0;
             this.dgv_scds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_scds_CellClick);

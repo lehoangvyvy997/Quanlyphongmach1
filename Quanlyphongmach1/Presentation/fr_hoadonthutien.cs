@@ -187,274 +187,277 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            txt_bnma.Text = dgv.Rows[dong].Cells[0].Value.ToString();
-            txt_bnhoten.Text = dgv.Rows[dong].Cells[1].Value.ToString();
-            txt_bntuoi.Text = dgv.Rows[dong].Cells[2].Value.ToString();
-            txt_bngioitinh.Text = dgv.Rows[dong].Cells[3].Value.ToString();
-            txt_bnsocmnd.Text = dgv.Rows[dong].Cells[4].Value.ToString();
-            txt_bnchuandoan.Text = dgv.Rows[dong].Cells[6].Value.ToString();
-            
-            string sql1 = "SELECT MaPhieuKham FROM dbo.PHIEUKHAM WHERE MaBenhNhan = N'" + txt_bnma.Text + "'";
-            DataTable ds_maBn = cn.taobang(sql1);
-            int countPukh = ds_maBn.Rows.Count;
-            switch (countPukh)
+            if(dong!=-1)
             {
-                case 0:
-                    {
-                        MessageBox.Show("Bệnh nhân không có phiếu khám!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        break;
-                    }
-                case 1:
-                    {
-                        string maphieukham1 = ds_maBn.Rows[0].ItemArray[0].ToString();
+                txt_bnma.Text = dgv.Rows[dong].Cells[0].Value.ToString();
+                txt_bnhoten.Text = dgv.Rows[dong].Cells[1].Value.ToString();
+                txt_bntuoi.Text = dgv.Rows[dong].Cells[2].Value.ToString();
+                txt_bngioitinh.Text = dgv.Rows[dong].Cells[3].Value.ToString();
+                txt_bnsocmnd.Text = dgv.Rows[dong].Cells[4].Value.ToString();
+                txt_bnchuandoan.Text = dgv.Rows[dong].Cells[6].Value.ToString();
 
-                        ck.MAPHIEUKHAM1 = maphieukham1;
-                        ck.MAPHIEUKHAM2 = "null";
-                        ck.MAPHIEUKHAM3 = "null";
+                string sql1 = "SELECT MaPhieuKham FROM dbo.PHIEUKHAM WHERE MaBenhNhan = N'" + txt_bnma.Text + "'";
+                DataTable ds_maBn = cn.taobang(sql1);
+                int countPukh = ds_maBn.Rows.Count;
+                switch (countPukh)
+                {
+                    case 0:
+                        {
+                            MessageBox.Show("Bệnh nhân không có phiếu khám!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            break;
+                        }
+                    case 1:
+                        {
+                            string maphieukham1 = ds_maBn.Rows[0].ItemArray[0].ToString();
 
-                        grb_1.Text = "Thông tin phiếu khám 1: " + maphieukham1;
-                        txt_1tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham1));
-                        txt_1chuandoan.Text = thucthi.Load_chuandoan(maphieukham1);
-                        // load CheckBox đơn thuốc
-                        if(thucthi.Load_chkkedon(maphieukham1)=="Không")
-                        {
-                            chk_1kedon.Checked = false;
-                            lb_1tienkedon.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1kedon.Checked = true;
-                            lb_1tienkedon.Text = thucthi.Load_tienkedon(maphieukham1);
-                        }
-                        // load CheckBox DVKT
-                        if (thucthi.Load_chkdvkt(maphieukham1) == "Không")
-                        {
-                            chk_1kt.Checked = false;
-                            lb_1tiendvkt.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1kt.Checked = true;
-                            lb_1tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham1);
-                        }
-                        // load CheckBox DVSC
-                        if (thucthi.Load_chkdvsc(maphieukham1) == "Không")
-                        {
-                            chk_1sc.Checked = false;
-                            lb_1tiendvsc.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1sc.Checked = true;
-                            lb_1tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham1);
-                        }
-                        break;
-                    }
-                case 2:
-                    {
-                        string maphieukham1 = ds_maBn.Rows[0].ItemArray[0].ToString(), maphieukham2 = ds_maBn.Rows[1].ItemArray[0].ToString();
+                            ck.MAPHIEUKHAM1 = maphieukham1;
+                            ck.MAPHIEUKHAM2 = "null";
+                            ck.MAPHIEUKHAM3 = "null";
 
-                        ck.MAPHIEUKHAM1 = maphieukham1;
-                        ck.MAPHIEUKHAM2 = maphieukham2;
-                        ck.MAPHIEUKHAM3 = "null";
+                            grb_1.Text = "Thông tin phiếu khám 1: " + maphieukham1;
+                            txt_1tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham1));
+                            txt_1chuandoan.Text = thucthi.Load_chuandoan(maphieukham1);
+                            // load CheckBox đơn thuốc
+                            if (thucthi.Load_chkkedon(maphieukham1) == "Không")
+                            {
+                                chk_1kedon.Checked = false;
+                                lb_1tienkedon.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1kedon.Checked = true;
+                                lb_1tienkedon.Text = thucthi.Load_tienkedon(maphieukham1);
+                            }
+                            // load CheckBox DVKT
+                            if (thucthi.Load_chkdvkt(maphieukham1) == "Không")
+                            {
+                                chk_1kt.Checked = false;
+                                lb_1tiendvkt.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1kt.Checked = true;
+                                lb_1tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham1);
+                            }
+                            // load CheckBox DVSC
+                            if (thucthi.Load_chkdvsc(maphieukham1) == "Không")
+                            {
+                                chk_1sc.Checked = false;
+                                lb_1tiendvsc.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1sc.Checked = true;
+                                lb_1tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham1);
+                            }
+                            break;
+                        }
+                    case 2:
+                        {
+                            string maphieukham1 = ds_maBn.Rows[0].ItemArray[0].ToString(), maphieukham2 = ds_maBn.Rows[1].ItemArray[0].ToString();
 
-                        grb_1.Text = "Thông tin phiếu khám 1: " + maphieukham1;
-                        txt_1tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham1));
-                        txt_1chuandoan.Text = thucthi.Load_chuandoan(maphieukham1);
-                        // load CheckBox đơn thuốc
-                        if (thucthi.Load_chkkedon(maphieukham1) == "Không")
-                        {
-                            chk_1kedon.Checked = false;
-                            lb_1tienkedon.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1kedon.Checked = true;
-                            lb_1tienkedon.Text = thucthi.Load_tienkedon(maphieukham1);
-                        }
-                        // load CheckBox DVKT
-                        if (thucthi.Load_chkdvkt(maphieukham1) == "Không")
-                        {
-                            chk_1kt.Checked = false;
-                            lb_1tiendvkt.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1kt.Checked = true;
-                            lb_1tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham1);
-                        }
+                            ck.MAPHIEUKHAM1 = maphieukham1;
+                            ck.MAPHIEUKHAM2 = maphieukham2;
+                            ck.MAPHIEUKHAM3 = "null";
 
-                        grb_2.Text = "Thông tin phiếu khám 2: " + maphieukham2;
-                        txt_2tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham2));
-                        txt_2chuandoan.Text = thucthi.Load_chuandoan(maphieukham2);
-                        // load CheckBox đơn thuốc
-                        if (thucthi.Load_chkkedon(maphieukham2) == "Không")
-                        {
-                            chk_2kedon.Checked = false;
-                            lb_2tienkedon.Text = "0";
-                        }
-                        else
-                        {
-                            chk_2kedon.Checked = true;
-                            lb_2tienkedon.Text = thucthi.Load_tienkedon(maphieukham2);
-                        }
-                        // load CheckBox DVKT
-                        if (thucthi.Load_chkdvkt(maphieukham2) == "Không")
-                        {
-                            chk_2kt.Checked = false;
-                            lb_2tiendvkt.Text = "0";
-                        }
-                        else
-                        {
-                            chk_2kt.Checked = true;
-                            lb_2tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham2);
-                        }
-                        // load CheckBox DVSC
-                        if (thucthi.Load_chkdvsc(maphieukham2) == "Không")
-                        {
-                            chk_2sc.Checked = false;
-                            lb_2tiendvsc.Text = "0";
-                        }
-                        else
-                        {
-                            chk_2sc.Checked = true;
-                            lb_2tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham2);
-                        }
-                        break;
-                    }
-                case 3:
-                    {
-                        string maphieukham1 = ds_maBn.Rows[0].ItemArray[0].ToString(), maphieukham2 = ds_maBn.Rows[1].ItemArray[0].ToString(), maphieukham3 = ds_maBn.Rows[2].ItemArray[0].ToString();
+                            grb_1.Text = "Thông tin phiếu khám 1: " + maphieukham1;
+                            txt_1tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham1));
+                            txt_1chuandoan.Text = thucthi.Load_chuandoan(maphieukham1);
+                            // load CheckBox đơn thuốc
+                            if (thucthi.Load_chkkedon(maphieukham1) == "Không")
+                            {
+                                chk_1kedon.Checked = false;
+                                lb_1tienkedon.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1kedon.Checked = true;
+                                lb_1tienkedon.Text = thucthi.Load_tienkedon(maphieukham1);
+                            }
+                            // load CheckBox DVKT
+                            if (thucthi.Load_chkdvkt(maphieukham1) == "Không")
+                            {
+                                chk_1kt.Checked = false;
+                                lb_1tiendvkt.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1kt.Checked = true;
+                                lb_1tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham1);
+                            }
 
-                        ck.MAPHIEUKHAM1 = maphieukham1;
-                        ck.MAPHIEUKHAM2 = maphieukham2;
-                        ck.MAPHIEUKHAM3 = maphieukham3;
+                            grb_2.Text = "Thông tin phiếu khám 2: " + maphieukham2;
+                            txt_2tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham2));
+                            txt_2chuandoan.Text = thucthi.Load_chuandoan(maphieukham2);
+                            // load CheckBox đơn thuốc
+                            if (thucthi.Load_chkkedon(maphieukham2) == "Không")
+                            {
+                                chk_2kedon.Checked = false;
+                                lb_2tienkedon.Text = "0";
+                            }
+                            else
+                            {
+                                chk_2kedon.Checked = true;
+                                lb_2tienkedon.Text = thucthi.Load_tienkedon(maphieukham2);
+                            }
+                            // load CheckBox DVKT
+                            if (thucthi.Load_chkdvkt(maphieukham2) == "Không")
+                            {
+                                chk_2kt.Checked = false;
+                                lb_2tiendvkt.Text = "0";
+                            }
+                            else
+                            {
+                                chk_2kt.Checked = true;
+                                lb_2tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham2);
+                            }
+                            // load CheckBox DVSC
+                            if (thucthi.Load_chkdvsc(maphieukham2) == "Không")
+                            {
+                                chk_2sc.Checked = false;
+                                lb_2tiendvsc.Text = "0";
+                            }
+                            else
+                            {
+                                chk_2sc.Checked = true;
+                                lb_2tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham2);
+                            }
+                            break;
+                        }
+                    case 3:
+                        {
+                            string maphieukham1 = ds_maBn.Rows[0].ItemArray[0].ToString(), maphieukham2 = ds_maBn.Rows[1].ItemArray[0].ToString(), maphieukham3 = ds_maBn.Rows[2].ItemArray[0].ToString();
+
+                            ck.MAPHIEUKHAM1 = maphieukham1;
+                            ck.MAPHIEUKHAM2 = maphieukham2;
+                            ck.MAPHIEUKHAM3 = maphieukham3;
 
 
-                        grb_1.Text = "Thông tin phiếu khám 1: " + maphieukham1;
-                        txt_1tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham1));
-                        txt_1chuandoan.Text = thucthi.Load_chuandoan(maphieukham1);
-                        // load CheckBox đơn thuốc
-                        if (thucthi.Load_chkkedon(maphieukham1) == "Không")
-                        {
-                            chk_1kedon.Checked = false;
-                            lb_1tienkedon.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1kedon.Checked = true;
-                            lb_1tienkedon.Text = thucthi.Load_tienkedon(maphieukham1);
-                        }
-                        // load CheckBox DVKT
-                        if (thucthi.Load_chkdvkt(maphieukham1) == "Không")
-                        {
-                            chk_1kt.Checked = false;
-                            lb_1tiendvkt.Text = "0";
-                        }
-                        else
-                        {
-                            chk_1kt.Checked = true;
-                            lb_1tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham1);
-                        }
+                            grb_1.Text = "Thông tin phiếu khám 1: " + maphieukham1;
+                            txt_1tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham1));
+                            txt_1chuandoan.Text = thucthi.Load_chuandoan(maphieukham1);
+                            // load CheckBox đơn thuốc
+                            if (thucthi.Load_chkkedon(maphieukham1) == "Không")
+                            {
+                                chk_1kedon.Checked = false;
+                                lb_1tienkedon.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1kedon.Checked = true;
+                                lb_1tienkedon.Text = thucthi.Load_tienkedon(maphieukham1);
+                            }
+                            // load CheckBox DVKT
+                            if (thucthi.Load_chkdvkt(maphieukham1) == "Không")
+                            {
+                                chk_1kt.Checked = false;
+                                lb_1tiendvkt.Text = "0";
+                            }
+                            else
+                            {
+                                chk_1kt.Checked = true;
+                                lb_1tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham1);
+                            }
 
-                        grb_2.Text = "Thông tin phiếu khám 2: " + maphieukham2;
-                        txt_2tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham2));
-                        txt_2chuandoan.Text = thucthi.Load_chuandoan(maphieukham2);
-                        // load CheckBox đơn thuốc
-                        if (thucthi.Load_chkkedon(maphieukham2) == "Không")
-                        {
-                            chk_2kedon.Checked = false;
-                            lb_2tienkedon.Text = "0";
-                        }
-                        else
-                        {
-                            chk_2kedon.Checked = true;
-                            lb_2tienkedon.Text = thucthi.Load_tienkedon(maphieukham2);
-                        }
-                        // load CheckBox DVKT
-                        if (thucthi.Load_chkdvkt(maphieukham2) == "Không")
-                        {
-                            chk_2kt.Checked = false;
-                            lb_2tiendvkt.Text = "0";
-                        }
-                        else
-                        {
-                            chk_2kt.Checked = true;
-                            lb_2tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham2);
-                        }
-                        // load CheckBox DVSC
-                        if (thucthi.Load_chkdvsc(maphieukham2) == "Không")
-                        {
-                            chk_2sc.Checked = false;
-                            lb_2tiendvsc.Text = "0";
-                        }
-                        else
-                        {
-                            chk_2sc.Checked = true;
-                            lb_2tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham2);
-                        }
+                            grb_2.Text = "Thông tin phiếu khám 2: " + maphieukham2;
+                            txt_2tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham2));
+                            txt_2chuandoan.Text = thucthi.Load_chuandoan(maphieukham2);
+                            // load CheckBox đơn thuốc
+                            if (thucthi.Load_chkkedon(maphieukham2) == "Không")
+                            {
+                                chk_2kedon.Checked = false;
+                                lb_2tienkedon.Text = "0";
+                            }
+                            else
+                            {
+                                chk_2kedon.Checked = true;
+                                lb_2tienkedon.Text = thucthi.Load_tienkedon(maphieukham2);
+                            }
+                            // load CheckBox DVKT
+                            if (thucthi.Load_chkdvkt(maphieukham2) == "Không")
+                            {
+                                chk_2kt.Checked = false;
+                                lb_2tiendvkt.Text = "0";
+                            }
+                            else
+                            {
+                                chk_2kt.Checked = true;
+                                lb_2tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham2);
+                            }
+                            // load CheckBox DVSC
+                            if (thucthi.Load_chkdvsc(maphieukham2) == "Không")
+                            {
+                                chk_2sc.Checked = false;
+                                lb_2tiendvsc.Text = "0";
+                            }
+                            else
+                            {
+                                chk_2sc.Checked = true;
+                                lb_2tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham2);
+                            }
 
-                        grb_3.Text = "Thông tin phiếu khám 3: " + maphieukham3;
-                        txt_3tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham3));
-                        txt_3chuandoan.Text = thucthi.Load_chuandoan(maphieukham3);
-                        // load CheckBox đơn thuốc
-                        if (thucthi.Load_chkkedon(maphieukham3) == "Không")
-                        {
-                            chk_3kedon.Checked = false;
-                            lb_3tienkedon.Text = "0";
+                            grb_3.Text = "Thông tin phiếu khám 3: " + maphieukham3;
+                            txt_3tenbs.Text = thucthi.Load_tenbs(thucthi.Load_mabs(maphieukham3));
+                            txt_3chuandoan.Text = thucthi.Load_chuandoan(maphieukham3);
+                            // load CheckBox đơn thuốc
+                            if (thucthi.Load_chkkedon(maphieukham3) == "Không")
+                            {
+                                chk_3kedon.Checked = false;
+                                lb_3tienkedon.Text = "0";
+                            }
+                            else
+                            {
+                                chk_3kedon.Checked = true;
+                                lb_3tienkedon.Text = thucthi.Load_tienkedon(maphieukham3);
+                            }
+                            // load CheckBox DVKT
+                            if (thucthi.Load_chkdvkt(maphieukham3) == "Không")
+                            {
+                                chk_3kt.Checked = false;
+                                lb_3tiendvkt.Text = "0";
+                            }
+                            else
+                            {
+                                chk_3kt.Checked = true;
+                                lb_3tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham3);
+                            }
+                            // load CheckBox DVSC
+                            if (thucthi.Load_chkdvsc(maphieukham3) == "Không")
+                            {
+                                chk_3sc.Checked = false;
+                                lb_3tiendvsc.Text = "0";
+                            }
+                            else
+                            {
+                                chk_3sc.Checked = true;
+                                lb_3tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham3);
+                            }
+                            break;
                         }
-                        else
+                    default:
                         {
-                            chk_3kedon.Checked = true;
-                            lb_3tienkedon.Text = thucthi.Load_tienkedon(maphieukham3);
+                            break;
                         }
-                        // load CheckBox DVKT
-                        if (thucthi.Load_chkdvkt(maphieukham3) == "Không")
-                        {
-                            chk_3kt.Checked = false;
-                            lb_3tiendvkt.Text = "0";
-                        }
-                        else
-                        {
-                            chk_3kt.Checked = true;
-                            lb_3tiendvkt.Text = thucthi.Load_tiendvkt(maphieukham3);
-                        }
-                        // load CheckBox DVSC
-                        if (thucthi.Load_chkdvsc(maphieukham3) == "Không")
-                        {
-                            chk_3sc.Checked = false;
-                            lb_3tiendvsc.Text = "0";
-                        }
-                        else
-                        {
-                            chk_3sc.Checked = true;
-                            lb_3tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham3);
-                        }
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
+                }
+                ck.TIENKHAM = txt_hdtienkham.Text;
+
+                int tienthuoc, tienkt, tiensc, tongtien;
+                tienthuoc = int.Parse(lb_1tienkedon.Text) + int.Parse(lb_2tienkedon.Text) + int.Parse(lb_3tienkedon.Text);
+                tienkt = int.Parse(lb_1tiendvkt.Text) + int.Parse(lb_2tiendvkt.Text) + int.Parse(lb_3tiendvkt.Text);
+                tiensc = int.Parse(lb_1tiendvsc.Text) + int.Parse(lb_2tiendvsc.Text) + int.Parse(lb_3tiendvsc.Text);
+                tongtien = tienthuoc + tienkt + tiensc + int.Parse(txt_hdtienkham.Text);
+                txt_hdtien.Text = tongtien.ToString();
+                ck.TIENTHUOC = tienthuoc.ToString();
+                sumThuoc = tienthuoc.ToString();
+                ck.TIENSUDUNGDVKYTHUATYTE = tienkt.ToString();
+                sumDvkt = tienkt.ToString();
+                ck.TIENSUDUNGDVSOCUU = tiensc.ToString();
+                sumDvsc = tiensc.ToString();
+                ck.TONGTIEN = txt_hdtien.Text;
+                ck.NGAYLAPHOADON = DateTime.Now.ToString();
+                ck.MAHOADONTHUTIEN = txt_hdma.Text;
+                ck.MABENHNHAN = txt_bnma.Text;
             }
-            ck.TIENKHAM = txt_hdtienkham.Text;
-
-            int tienthuoc, tienkt, tiensc, tongtien;
-            tienthuoc = int.Parse(lb_1tienkedon.Text) + int.Parse(lb_2tienkedon.Text) + int.Parse(lb_3tienkedon.Text);
-            tienkt = int.Parse(lb_1tiendvkt.Text) + int.Parse(lb_2tiendvkt.Text) + int.Parse(lb_3tiendvkt.Text);
-            tiensc = int.Parse(lb_1tiendvsc.Text) + int.Parse(lb_2tiendvsc.Text) + int.Parse(lb_3tiendvsc.Text);
-            tongtien = tienthuoc + tienkt + tiensc + int.Parse(txt_hdtienkham.Text);
-            txt_hdtien.Text = tongtien.ToString();
-            ck.TIENTHUOC = tienthuoc.ToString();
-            sumThuoc = tienthuoc.ToString();
-            ck.TIENSUDUNGDVKYTHUATYTE = tienkt.ToString();
-            sumDvkt = tienkt.ToString();
-            ck.TIENSUDUNGDVSOCUU = tiensc.ToString();
-            sumDvsc = tiensc.ToString();
-            ck.TONGTIEN = txt_hdtien.Text;
-            ck.NGAYLAPHOADON = DateTime.Now.ToString();
-            ck.MAHOADONTHUTIEN = txt_hdma.Text;
-            ck.MABENHNHAN = txt_bnma.Text;
             
         }
 

@@ -77,6 +77,7 @@
             this.txt_pw.Size = new System.Drawing.Size(233, 26);
             this.txt_pw.TabIndex = 2;
             this.txt_pw.UseSystemPasswordChar = true;
+            this.txt_pw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_pw_KeyDown);
             // 
             // label1
             // 
@@ -112,6 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(590, 250);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -127,6 +129,7 @@
             this.Text = "Đăng nhập";
             this.Activated += new System.EventHandler(this.fr_dangnhap_Activated);
             this.Load += new System.EventHandler(this.fr_dangnhap_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.fr_dangnhap_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

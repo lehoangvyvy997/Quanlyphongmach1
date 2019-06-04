@@ -35,19 +35,31 @@ namespace Quanlyphongmach1
         {
             return cn.LoadLable("SELECT MaNhanVien FROM dbo.TAIKHOAN WHERE Username = '" + us + "'");
         }
-
+        private string load_maloaiTK(string us)
+        {
+            return cn.LoadLable("SELECT MaLoaiTaiKhoan FROM dbo.TAIKHOAN WHERE Username = '" + us + "'");
+        }
 
         private void btn_dangnhap_Click(object sender, EventArgs e)
         {
             if(kiemtradangnhap(txt_un.Text, txt_pw.Text)==1)
             {
-                MessageBox.Show("Đăng Nhập Thành Công", "Chúc Mừng", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                fr_trangcanhan f = new fr_trangcanhan(load_maNV(txt_un.Text));
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-
+                
+                if(load_maloaiTK(txt_un.Text)=="LTK00")
+                {
+                    fr_quanlychung f = new fr_quanlychung();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    fr_trangcanhan f = new fr_trangcanhan(load_maNV(txt_un.Text));
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                
             }
             else
             {
@@ -70,6 +82,18 @@ namespace Quanlyphongmach1
         private void fr_dangnhap_Activated(object sender, EventArgs e)
         {
             
+        }
+
+        private void fr_dangnhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_dangnhap.PerformClick();
+        }
+
+        private void txt_pw_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_dangnhap.PerformClick();
         }
     }
 }

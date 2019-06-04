@@ -36,12 +36,12 @@
             this.btn_themmoi = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_phsd = new System.Windows.Forms.TextBox();
             this.txt_ten = new System.Windows.Forms.TextBox();
             this.txt_ma = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_phsd = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgv_ds = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(10, 9);
@@ -157,6 +157,17 @@
             this.panel2.Size = new System.Drawing.Size(401, 108);
             this.panel2.TabIndex = 11;
             // 
+            // txt_phsd
+            // 
+            this.txt_phsd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_phsd.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phsd.Location = new System.Drawing.Point(139, 73);
+            this.txt_phsd.Name = "txt_phsd";
+            this.txt_phsd.Size = new System.Drawing.Size(250, 27);
+            this.txt_phsd.TabIndex = 2;
+            this.txt_phsd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phsd_KeyPress);
+            // 
             // txt_ten
             // 
             this.txt_ten.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -176,6 +187,16 @@
             this.txt_ma.Name = "txt_ma";
             this.txt_ma.Size = new System.Drawing.Size(250, 27);
             this.txt_ma.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 19);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Phí sử dụng:";
             // 
             // label3
             // 
@@ -197,27 +218,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã dịch vụ:";
             // 
-            // txt_phsd
-            // 
-            this.txt_phsd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_phsd.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phsd.Location = new System.Drawing.Point(139, 73);
-            this.txt_phsd.Name = "txt_phsd";
-            this.txt_phsd.Size = new System.Drawing.Size(250, 27);
-            this.txt_phsd.TabIndex = 2;
-            this.txt_phsd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phsd_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 19);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Phí sử dụng:";
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.dgv_ds);
@@ -232,6 +232,7 @@
             this.dgv_ds.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_ds.Location = new System.Drawing.Point(0, 0);
             this.dgv_ds.Name = "dgv_ds";
+            this.dgv_ds.ReadOnly = true;
             this.dgv_ds.Size = new System.Drawing.Size(401, 230);
             this.dgv_ds.TabIndex = 0;
             this.dgv_ds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ds_CellClick);
@@ -241,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
             this.ClientSize = new System.Drawing.Size(404, 445);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);

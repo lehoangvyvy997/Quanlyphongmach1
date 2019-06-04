@@ -314,25 +314,29 @@ namespace Quanlyphongmach1.Presentation
         {
             dong = e.RowIndex;
 
-            txt_manhanvien.Text = dgv_dsnhanvien.Rows[dong].Cells[0].Value.ToString();
-            cbo_maloainhanvien.Text = dgv_dsnhanvien.Rows[dong].Cells[10].Value.ToString();
-            //lb_tenloainv.Text = "-----";
-            cbo_machucvu.Text = dgv_dsnhanvien.Rows[dong].Cells[11].Value.ToString();
-            //lb_tenchucvu.Text = "-----";
-            cbo_matinhtrang.Text = dgv_dsnhanvien.Rows[dong].Cells[12].Value.ToString();
-            //lb_tentinhtrang.Text = "-----";
-            txt_hotennhanvien.Text = dgv_dsnhanvien.Rows[dong].Cells[1].Value.ToString();
-            dtm_ngaysinh.Text = dgv_dsnhanvien.Rows[dong].Cells[3].Value.ToString();
-            cbo_gioitinh.Text = dgv_dsnhanvien.Rows[dong].Cells[8].Value.ToString();
-            //
-            txt_sdt.Text = dgv_dsnhanvien.Rows[dong].Cells[2].Value.ToString();
-            //
-            txt_email.Text = dgv_dsnhanvien.Rows[dong].Cells[9].Value.ToString();
-            dtm_ngayvaolam.Text = dgv_dsnhanvien.Rows[dong].Cells[7].Value.ToString();
-            txt_tienluong.Text = dgv_dsnhanvien.Rows[dong].Cells[4].Value.ToString();
-            txt_tientrocap.Text = dgv_dsnhanvien.Rows[dong].Cells[5].Value.ToString();
-            txt_tienthuong.Text = dgv_dsnhanvien.Rows[dong].Cells[6].Value.ToString();
-            cbo_maphongkham.Text= dgv_dsnhanvien.Rows[dong].Cells[13].Value.ToString();
+            if (dong != -1)
+            {
+                txt_manhanvien.Text = dgv_dsnhanvien.Rows[dong].Cells[0].Value.ToString();
+                cbo_maloainhanvien.Text = dgv_dsnhanvien.Rows[dong].Cells[10].Value.ToString();
+                //lb_tenloainv.Text = "-----";
+                cbo_machucvu.Text = dgv_dsnhanvien.Rows[dong].Cells[11].Value.ToString();
+                //lb_tenchucvu.Text = "-----";
+                cbo_matinhtrang.Text = dgv_dsnhanvien.Rows[dong].Cells[12].Value.ToString();
+                //lb_tentinhtrang.Text = "-----";
+                txt_hotennhanvien.Text = dgv_dsnhanvien.Rows[dong].Cells[1].Value.ToString();
+                dtm_ngaysinh.Text = dgv_dsnhanvien.Rows[dong].Cells[3].Value.ToString();
+                cbo_gioitinh.Text = dgv_dsnhanvien.Rows[dong].Cells[8].Value.ToString();
+                //
+                txt_sdt.Text = dgv_dsnhanvien.Rows[dong].Cells[2].Value.ToString();
+                //
+                txt_email.Text = dgv_dsnhanvien.Rows[dong].Cells[9].Value.ToString();
+                dtm_ngayvaolam.Text = dgv_dsnhanvien.Rows[dong].Cells[7].Value.ToString();
+                txt_tienluong.Text = dgv_dsnhanvien.Rows[dong].Cells[4].Value.ToString();
+                txt_tientrocap.Text = dgv_dsnhanvien.Rows[dong].Cells[5].Value.ToString();
+                txt_tienthuong.Text = dgv_dsnhanvien.Rows[dong].Cells[6].Value.ToString();
+                cbo_maphongkham.Text = dgv_dsnhanvien.Rows[dong].Cells[13].Value.ToString();
+            }
+
             locktext();
         }
 
