@@ -64,6 +64,11 @@ namespace Quanlyphongmach1.Presentation
                         string sql = (@"UPDATE    dbo.NHANVIEN
                                      SET  SoDienThoai ='" + txt_sdt.Text + "', Email ='" + txt_mail.Text + "'  where MaNhanVien='" + IDNV + "'");
                         cn.ExcuteNonQuery(sql);
+                        DialogResult dlr = MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (dlr == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
                         break;
                     }
                 case 1:

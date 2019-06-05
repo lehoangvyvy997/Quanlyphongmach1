@@ -29,7 +29,7 @@ namespace Quanlyphongmach1.Presentation
         }
         private bool kiemtraPassword(string username, string password)
         {
-            return cn.kiemtra("select count(*) from [TAIKHOAN] where Password = '" + password + "' AND Username='" + username + "'");
+            return cn.kiemtra("select count(*) from [TAIKHOAN] where Password1 = '" + password + "' AND Username='" + username + "'");
         }
         private int kiemtranull()
         {
@@ -44,19 +44,18 @@ namespace Quanlyphongmach1.Presentation
             // kiểm tra tồn tại username
             if (!kiemtraUsername(txt_username.Text))
                 { return 5; }// không tồn tại username
-            else
-                { return 6; }// username tồn tại
-
+            
+            
             // kiểm tra password
-            if (kiemtraPassword(txt_username.Text, txt_mkcu.Text))
+            if (!kiemtraPassword(txt_username.Text, txt_mkcu.Text))
             { return 7; }
-            else
-            { return 8; }
+
             // kiểm tra mật khẩu mới
+
             if (txt_makmoi1.Text != txt_mkmoi2.Text)
                 return 9;
             return 0;
-            
+
         }
         private void txt_luu_Click(object sender, EventArgs e)
         {
@@ -69,6 +68,12 @@ namespace Quanlyphongmach1.Presentation
                         string sql = (@"UPDATE    dbo.TAIKHOAN
                                      SET  Password1 ='" + txt_makmoi1.Text + "'  where Username='" + txt_username.Text + "'");
                         cn.ExcuteNonQuery(sql);
+                        
+                        DialogResult dlr = MessageBox.Show("Đổi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (dlr == DialogResult.OK)
+                        {
+                            this.Close();
+                        }
                         break;
                     }
                 case 1:
