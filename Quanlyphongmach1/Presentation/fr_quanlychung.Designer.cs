@@ -61,6 +61,7 @@
             this.btn_thongke_nhapkho = new System.Windows.Forms.Button();
             this.btn_thongke_xemtienluong = new System.Windows.Forms.Button();
             this.btn_thongke_doanhthu = new System.Windows.Forms.Button();
+            this.btn_nvsuachamcong = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,12 +76,13 @@
             this.groupBox1.BackColor = System.Drawing.Color.SkyBlue;
             this.groupBox1.Controls.Add(this.btn_nvttlv);
             this.groupBox1.Controls.Add(this.btn_nvcv);
+            this.groupBox1.Controls.Add(this.btn_nvsuachamcong);
             this.groupBox1.Controls.Add(this.btn_nvchamcong);
             this.groupBox1.Controls.Add(this.btn_nvloainv);
             this.groupBox1.Controls.Add(this.btn_nvql);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 261);
+            this.groupBox1.Size = new System.Drawing.Size(268, 312);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý nhân viên";
@@ -91,7 +93,7 @@
             this.btn_nvttlv.Name = "btn_nvttlv";
             this.btn_nvttlv.Size = new System.Drawing.Size(256, 41);
             this.btn_nvttlv.TabIndex = 0;
-            this.btn_nvttlv.Text = "Quản lí tình trạng làm việc";
+            this.btn_nvttlv.Text = "Quản lý tình trạng làm việc";
             this.btn_nvttlv.UseVisualStyleBackColor = true;
             this.btn_nvttlv.Click += new System.EventHandler(this.btn_nvttlv_Click);
             // 
@@ -401,7 +403,7 @@
             this.groupBox7.Controls.Add(this.btn_thongke_nhapkho);
             this.groupBox7.Controls.Add(this.btn_thongke_xemtienluong);
             this.groupBox7.Controls.Add(this.btn_thongke_doanhthu);
-            this.groupBox7.Location = new System.Drawing.Point(12, 297);
+            this.groupBox7.Location = new System.Drawing.Point(12, 363);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(268, 170);
             this.groupBox7.TabIndex = 0;
@@ -439,6 +441,17 @@
             this.btn_thongke_doanhthu.Text = "Xem thống kê doanh thu";
             this.btn_thongke_doanhthu.UseVisualStyleBackColor = false;
             this.btn_thongke_doanhthu.Click += new System.EventHandler(this.btn_thongke_doanhthu_Click);
+            // 
+            // btn_nvsuachamcong
+            // 
+            this.btn_nvsuachamcong.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_nvsuachamcong.Location = new System.Drawing.Point(6, 260);
+            this.btn_nvsuachamcong.Name = "btn_nvsuachamcong";
+            this.btn_nvsuachamcong.Size = new System.Drawing.Size(256, 41);
+            this.btn_nvsuachamcong.TabIndex = 0;
+            this.btn_nvsuachamcong.Text = "Sửa chấm công";
+            this.btn_nvsuachamcong.UseVisualStyleBackColor = false;
+            this.btn_nvsuachamcong.Click += new System.EventHandler(this.btn_nvsuachamcong_Click);
             // 
             // fr_quanlychung
             // 
@@ -505,5 +518,6 @@
         private System.Windows.Forms.Button btn_thongke_nhapkho;
         private System.Windows.Forms.Button btn_thongke_xemtienluong;
         private System.Windows.Forms.Button btn_thongke_doanhthu;
+        private System.Windows.Forms.Button btn_nvsuachamcong;
     }
 }

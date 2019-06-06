@@ -300,5 +300,17 @@ namespace Quanlyphongmach1.Presentation
                 fr.ShowDialog();
             }
         }
+
+        private void btn_nvsuachamcong_Click(object sender, EventArgs e)
+        {
+            Form frm = kiemtratontai(typeof(fr_chamcong_edit));
+            if (frm != null)
+                frm.Activate();
+            else
+            {
+                fr_chamcong_edit fr = new fr_chamcong_edit();
+                fr.ShowDialog();
+            }
+        }
     }
 }
