@@ -27,7 +27,6 @@ namespace Quanlyphongmach1.Presentation
             InitializeComponent();
         }
         ConnectDB cn = new ConnectDB();
-
         E_tb_Chitiettoathuockham thucthi = new E_tb_Chitiettoathuockham();
         EC_tb_Chitiettoathuockham ck = new EC_tb_Chitiettoathuockham();
 
@@ -112,7 +111,9 @@ namespace Quanlyphongmach1.Presentation
         }
         private void fr_chitiettoathuockham_Load(object sender, EventArgs e)
         {
+            grb1.Text = "Kê đơn thuốc phiếu khám:" + Mapukh;
             thucthi.loadcbo_mathk(cbo_ma);
+            thucthi.load_mathuockham(cbo_ma);
 
             locktext();
             setnull();
@@ -280,6 +281,9 @@ namespace Quanlyphongmach1.Presentation
         {
             btn_sua.Enabled = true;
             btn_xoa.Enabled = true;
+            txt_congdung.Text = thucthi.Load_congdungthk(cbo_ma.Text);
+            txt_tenthuoc.Text = thucthi.Load_tenthk(cbo_ma.Text);
+            txt_donvi.Text = thucthi.Load_donvithk(cbo_ma.Text);
         }
     }
 }

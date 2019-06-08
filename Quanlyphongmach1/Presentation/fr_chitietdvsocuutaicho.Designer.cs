@@ -252,6 +252,8 @@
             // 
             // cbo_scmadp
             // 
+            this.cbo_scmadp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_scmadp.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbo_scmadp.FormattingEnabled = true;
             this.cbo_scmadp.Location = new System.Drawing.Point(95, 33);
             this.cbo_scmadp.Name = "cbo_scmadp";

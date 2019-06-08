@@ -398,7 +398,7 @@ namespace Quanlyphongmach1.Presentation
                         ck_pk.TONGTIENDVSOCUU = "0";
                     }
 
-                    thucthi_pk.themmoi(ck_pk);
+                    thucthi_pk.capnhatpkham(ck_pk);
                 }
                 catch (Exception ex)
                 {
@@ -537,16 +537,59 @@ namespace Quanlyphongmach1.Presentation
         //Kết thúc
 
         // Sự kiện xử lý lập đơn thuốc
+        private void themphieukham()
+        {
+            //kiểm tra mã phiếu khám
+            if(thucthi_pk.kiemtra_mapukham(txt_pkma.Text)==1)
+            {
+                // chua luu
+                
+                if(txt_pkchuandoan.Text=="")
+                {
+                    MessageBox.Show("Thông tin chuẩn đoán bệnh nhân không được để trống!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_pkma.Focus();
+                }
+                else
+                {
+                    ck_pk.MAPHIEUKHAM = txt_pkma.Text;
+                    ck_pk.MAHNHANVIEN = txt_bsma.Text;
+                    ck_pk.MABENHNHAN = txt_bnma.Text;
+                    ck_pk.NGAYKHAM = dtm_pkngay.Value.ToShortDateString();
+                    ck_pk.CHUANDOANBENH = txt_pkchuandoan.Text;
+
+                    ck_pk.KEDONTHUOC = "Không";
+                    ck_pk.SUDUNGDVKYTHUATYTE = "Không";
+                    ck_pk.SUDUNGDVSOCUU = "Không";
+                    ck_pk.TONGTIENTHUOC = "0";
+                    ck_pk.TONGTIENDVKYTHUAT = "0";
+                    ck_pk.TONGTIENDVSOCUU = "0";
+
+                    thucthi_pk.themmoi(ck_pk);
+                }
+            }
+        }
         private void btn_pkthemdonthuoc_Click(object sender, EventArgs e)
         {
-            Form frm = kiemtratontai(typeof(fr_chitiettoathuockham));
-            if (frm != null)
-                frm.Activate();
+            if (txt_pkchuandoan.Text == "")
+            {
+                MessageBox.Show("Thông tin chuẩn đoán bệnh nhân không được để trống!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_pkma.Focus();
+            }
             else
             {
-                fr_chitiettoathuockham fr = new fr_chitiettoathuockham(txt_pkma.Text);
-                fr.ShowDialog();
+                themphieukham();
+                Form frm = kiemtratontai(typeof(fr_chitiettoathuockham));
+                if (frm != null)
+                    frm.Activate();
+                else
+                {
+                    fr_chitiettoathuockham fr = new fr_chitiettoathuockham(txt_pkma.Text);
+                    fr.ShowDialog();
+                }
+
             }
+            
+
         }
 
         private void fr_phieukham_Activated(object sender, EventArgs e)
@@ -556,26 +599,46 @@ namespace Quanlyphongmach1.Presentation
 
         private void btn_pkthemctkt_Click(object sender, EventArgs e)
         {
-            Form frm = kiemtratontai(typeof(fr_chitietdvkythuatyte));
-            if (frm != null)
-                frm.Activate();
+            if (txt_pkchuandoan.Text == "")
+            {
+                MessageBox.Show("Thông tin chuẩn đoán bệnh nhân không được để trống!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_pkma.Focus();
+            }
             else
             {
-                fr_chitietdvkythuatyte fr = new fr_chitietdvkythuatyte(txt_pkma.Text);
-                fr.ShowDialog();
+                themphieukham();
+                Form frm = kiemtratontai(typeof(fr_chitietdvkythuatyte));
+                if (frm != null)
+                    frm.Activate();
+                else
+                {
+                    fr_chitietdvkythuatyte fr = new fr_chitietdvkythuatyte(txt_pkma.Text);
+                    fr.ShowDialog();
+                }
             }
+                
         }
 
         private void btn_pkthemctsc_Click(object sender, EventArgs e)
         {
-            Form frm = kiemtratontai(typeof(fr_chitietdvsocuutaicho));
-            if (frm != null)
-                frm.Activate();
+            if (txt_pkchuandoan.Text == "")
+            {
+                MessageBox.Show("Thông tin chuẩn đoán bệnh nhân không được để trống!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_pkma.Focus();
+            }
             else
             {
-                fr_chitietdvsocuutaicho fr = new fr_chitietdvsocuutaicho(txt_pkma.Text);
-                fr.ShowDialog();
+                themphieukham();
+                Form frm = kiemtratontai(typeof(fr_chitietdvsocuutaicho));
+                if (frm != null)
+                    frm.Activate();
+                else
+                {
+                    fr_chitietdvsocuutaicho fr = new fr_chitietdvsocuutaicho(txt_pkma.Text);
+                    fr.ShowDialog();
+                }
             }
+                
         }
 
         private void btn_bnxemlichsu_Click(object sender, EventArgs e)
@@ -597,6 +660,8 @@ namespace Quanlyphongmach1.Presentation
         {
             btn_bnxemlichsu.Enabled = true;
         }
+
+        
     }
 
 }

@@ -271,6 +271,7 @@
             this.txt_tinhtrang.Enabled = false;
             this.txt_tinhtrang.Location = new System.Drawing.Point(170, 134);
             this.txt_tinhtrang.Name = "txt_tinhtrang";
+            this.txt_tinhtrang.ReadOnly = true;
             this.txt_tinhtrang.Size = new System.Drawing.Size(229, 26);
             this.txt_tinhtrang.TabIndex = 1;
             this.txt_tinhtrang.Text = "Chưa nhập liệu";

@@ -133,3 +133,4 @@ C:\Users\LeHoangVyVy\Desktop\Project\Quanlyphongmach1\Quanlyphongmach1\obj\Debug
 C:\Users\LeHoangVyVy\Desktop\Project\Quanlyphongmach1\Quanlyphongmach1\bin\Debug\Quanlyphongmach1.exe
 C:\Users\LeHoangVyVy\Desktop\Project\Quanlyphongmach1\Quanlyphongmach1\bin\Debug\Quanlyphongmach1.pdb
 C:\Users\LeHoangVyVy\Desktop\Project\Quanlyphongmach1\Quanlyphongmach1\obj\Debug\Quanlyphongmach1.csproj.CoreCompileInputs.cache
+C:\Users\LeHoangVyVy\Desktop\Project\Quanlyphongmach1\Quanlyphongmach1\obj\Debug\Quanlyphongmach1.Presentation.Admin.test.resources

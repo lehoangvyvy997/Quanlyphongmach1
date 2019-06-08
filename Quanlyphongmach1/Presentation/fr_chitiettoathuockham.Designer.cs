@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grb1 = new System.Windows.Forms.GroupBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.dgv_dsctthk = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -49,25 +49,25 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox4.SuspendLayout();
+            this.grb1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dsctthk)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox4
+            // grb1
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.Pink;
-            this.groupBox4.Controls.Add(this.panel6);
-            this.groupBox4.Controls.Add(this.panel5);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(0, 0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(623, 322);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Kê đơn thuốc";
+            this.grb1.BackColor = System.Drawing.Color.Pink;
+            this.grb1.Controls.Add(this.panel6);
+            this.grb1.Controls.Add(this.panel5);
+            this.grb1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grb1.Location = new System.Drawing.Point(0, 0);
+            this.grb1.Name = "grb1";
+            this.grb1.Size = new System.Drawing.Size(623, 322);
+            this.grb1.TabIndex = 1;
+            this.grb1.TabStop = false;
+            this.grb1.Text = "Kê đơn thuốc";
             // 
             // panel6
             // 
@@ -243,6 +243,8 @@
             // 
             // cbo_ma
             // 
+            this.cbo_ma.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbo_ma.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbo_ma.FormattingEnabled = true;
             this.cbo_ma.Location = new System.Drawing.Point(89, 3);
             this.cbo_ma.Name = "cbo_ma";
@@ -294,7 +296,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(623, 322);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.grb1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -303,7 +305,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi tiết toa thuốc khám";
             this.Load += new System.EventHandler(this.fr_chitiettoathuockham_Load);
-            this.groupBox4.ResumeLayout(false);
+            this.grb1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_dsctthk)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -315,7 +317,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grb1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.DataGridView dgv_dsctthk;
         private System.Windows.Forms.Panel panel5;

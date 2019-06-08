@@ -16,7 +16,7 @@ namespace Quanlyphongmach1
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            //Application.Run(new Presentation.fr_chucvu());
+            //Application.Run(new Presentation.Admin.test());
             Application.Run(new fr_dangnhap());
         }
     }

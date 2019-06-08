@@ -93,7 +93,7 @@ namespace Quanlyphongmach1.DataAccess
         // đếm số hóa đơn trong ngày
         public int demsohoadon_inday(DateTime date)
         {
-            return cn.ExecuteScalar("SELECT COUNT(*) FROM dbo.HOADONTHUTIEN WHERE AND NgayKham = '" + date.Year + "/" + date.Month + "/" + date.Day + "'");
+            return cn.ExecuteScalar("SELECT COUNT(*) FROM dbo.HOADONTHUTIEN WHERE NgayLapHoaDon = '" + date.Year + "/" + date.Month + "/" + date.Day + "'");
         }
     }
 }

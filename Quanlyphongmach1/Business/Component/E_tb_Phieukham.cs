@@ -12,7 +12,20 @@ namespace Quanlyphongmach1.Business.Component
     {
         SQL_tb_Phieukham keysql = new SQL_tb_Phieukham();
 
+        public int kiemtra_mapukham(string val)
+        {
 
+            if (!keysql.kiemtramapukh(val))
+            {
+                return 1;
+                // chưa lưu
+            }
+            else
+            {
+                return 0;
+                //đã lưu
+            }
+        }
         // kiểm mã phiếu khám trong bảng chi tiết toa thuốc
         public bool kiemtramapukh_cttt(string mapukh)
         {
@@ -32,13 +45,14 @@ namespace Quanlyphongmach1.Business.Component
             if(!keysql.kiemtramapukh(val.MAPHIEUKHAM))
             {
                 keysql.themmoi(val);
-                MessageBox.Show("Lưu thành công!", "Thông Báo", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("Mã phiếu khám đã tồn tại, hãy chọn mã khác!", "Chú Ý", MessageBoxButtons.OK);
             }
-            keysql.themmoi(val);
+        }
+        public void capnhatpkham(EC_tb_Phieukham val)
+        {
+            keysql.capnhatpkham(val);
         }
         // Xóa bệnh nhân bảng tạm
         public void xoa_bn(string maBn, string maPgKh)

@@ -35,6 +35,12 @@ namespace Quanlyphongmach1.DataAccess
                       (MaPhieuKham,MaNhanVien,MaBenhNhan,NgayKham,ChuanDoanBenh,KeDonThuoc,TongTienThuoc,SuDungDVKyThuatYTe,TongTienDVKyThuat,SuDungDVSoCuu,TongTienDVSoCuu) VALUES   ('" + key.MAPHIEUKHAM + "','" + key.MAHNHANVIEN + "','" + key.MABENHNHAN + "','" + key.NGAYKHAM + "',N'" + key.CHUANDOANBENH + "',N'" + key.KEDONTHUOC + "','" + key.TONGTIENTHUOC + "',N'" + key.SUDUNGDVKYTHUATYTE + "','" + key.TONGTIENDVKYTHUAT + "',N'" + key.SUDUNGDVSOCUU + "','" + key.TONGTIENDVSOCUU + "')");
             
         }
+        public void capnhatpkham(EC_tb_Phieukham key)
+        {
+            string sql = (@"UPDATE dbo.PHIEUKHAM
+            SET ChuanDoanBenh =N'" + key.CHUANDOANBENH + "',KeDonThuoc=N'"+key.KEDONTHUOC+ "',TongTienThuoc='"+key.TONGTIENTHUOC+"',SuDungDVKyThuatYTe=N'"+key.SUDUNGDVKYTHUATYTE+"',TongTienDVKyThuat='"+key.TONGTIENDVKYTHUAT+"',SuDungDVSoCuu=N'"+key.SUDUNGDVSOCUU+"',TongTienDVSoCuu='"+key.TONGTIENDVSOCUU+"' where  MaPhieuKham ='" + key.MAPHIEUKHAM + "'");
+            cn.ExcuteNonQuery(sql);
+        }
         // xóa chit tiết toa thuốc khám
         public void xoa_(string tab, string val)
         {

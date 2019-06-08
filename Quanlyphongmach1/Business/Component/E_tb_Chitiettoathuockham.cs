@@ -12,6 +12,7 @@ namespace Quanlyphongmach1.Business.Component
     {
         SQL_tb_Chitiettoathuockham keysql = new SQL_tb_Chitiettoathuockham();
 
+        
         public bool kiemtra_mapukh(string val)
         {
             return keysql.kiemtra_mapukh(val);
@@ -67,7 +68,11 @@ namespace Quanlyphongmach1.Business.Component
         {
             keysql.xoa_(key);
         }
-
+        // load auto-complete search
+        public void loadcbo_mathk(ComboBox cbo)
+        {
+            keysql.loadcbo_mathk(cbo);
+        }
         // Load mã thuốc khám
         public void load_mathuockham(ComboBox cbo)
         {
@@ -89,11 +94,7 @@ namespace Quanlyphongmach1.Business.Component
         {
             return keysql.Load_giabanthk(mathk);
         }
-        // load auto-complete search
-        public void loadcbo_mathk(ComboBox cbo)
-        {
-            keysql.loadcbo_mathk(cbo);
-        }
+       
 
         public int laysohang(string mapukh)
         {

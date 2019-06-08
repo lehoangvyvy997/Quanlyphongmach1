@@ -138,6 +138,7 @@ namespace Quanlyphongmach1.Presentation
         {
             thucthi.loadcbo_madp(cbo_scmadp);
             thucthi.load_madvsc(cbo_scmadv);
+            thucthi.load_madp(cbo_scmadp);
 
             setnull();
             locktext();

@@ -163,6 +163,12 @@
     <Compile Include="Presentation\Admin\fr_admin_xemphieukham.Designer.cs">
       <DependentUpon>fr_admin_xemphieukham.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Admin\test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Admin\test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\fr_benhnhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -386,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Admin\fr_admin_xemphieukham.resx">
       <DependentUpon>fr_admin_xemphieukham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Admin\test.resx">
+      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\fr_benhnhan.resx">
       <DependentUpon>fr_benhnhan.cs</DependentUpon>

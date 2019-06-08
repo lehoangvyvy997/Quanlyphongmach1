@@ -51,12 +51,17 @@ namespace Quanlyphongmach1.DataAccess
                     SET MaThuocKham ='" + val.MATHUOCKHAM + "',CachDung =N'" + val.CACHDUNG + "',SoLuong =" + val.SOLUONG + ",ThanhTien =" + val.THANHTIEN + " WHERE MaPhieuKham='" + val.MAPHIEUKHAM + "' AND MaThuocKham= '" + val.MATHUOCKHAM + "' AND SoLuong= " + val.SOLUONG + " AND CachDung = N'" + val.CACHDUNG + "'");
             cn.ExcuteNonQuery(sql);
         }
-        
+        // load auto-complete search
+        public void loadcbo_mathk(ComboBox cbo)
+        {
+            cn.AutoComplete_cbo(cbo, "SELECT * FROM dbo.THUOCKHAM", "MaThuocKham");
+        }
         // Load mã thuốc khám
         public void load_mathuockham(ComboBox cbo)
         {
-            cn.LoadLenCombobox(cbo, "SELECT   MaThuocKham   FROM dbo.THUOCKHAM", 0);
+            cn.LoadLenCombobox(cbo, "SELECT MaThuocKham FROM dbo.THUOCKHAM", 0);
         }
+
         public string Load_tenthk( string mathk)
         {
             return cn.LoadLable("SELECT [TenThuocKham] From dbo.THUOCKHAM where MaThuocKham= '" + mathk + "'");
@@ -74,11 +79,7 @@ namespace Quanlyphongmach1.DataAccess
             return cn.LoadLable("SELECT [GiaThuocBan] From dbo.THUOCKHAM where MaThuocKham= '" + mathk + "'");
             
         }
-        // load auto-complete search
-        public void loadcbo_mathk(ComboBox cbo)
-        {
-            cn.AutoComplete_cbo(cbo, "SELECT * FROM dbo.THUOCKHAM", "MaThuocKham");
-        }
+       
         
         public int laysohang(string mapukh)
         {
