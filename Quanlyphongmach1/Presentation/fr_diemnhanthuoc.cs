@@ -219,10 +219,10 @@ namespace Quanlyphongmach1.Presentation
         // cập nhật số lượng thuốc trong kho
         private void kiemtracapnhatthuoc()
         {
-            int rows = dgv_dsthuoc.Rows.Count;
+            int rows = dgv_dsthuoc.Rows.Count-1;
             for(int i=0;i<rows;i++)
             {
-                if(int.Parse(load_sdcon(dgv_dsthuoc.Rows[i].Cells[2].Value.ToString()))<int.Parse(dgv_dsthuoc.Rows[i].Cells[2].Value.ToString()))
+                if(int.Parse(load_sdcon(dgv_dsthuoc.Rows[i].Cells[1].Value.ToString()))<int.Parse(dgv_dsthuoc.Rows[i].Cells[2].Value.ToString()))
                 {
                     MessageBox.Show("Số lượng thuốc "+ load_tenthuoc(dgv_dsthuoc.Rows[i].Cells[1].Value.ToString()) + " trong kho không đủ để cấp phát!", "Chú Ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -230,10 +230,10 @@ namespace Quanlyphongmach1.Presentation
         }
         private void capnhatthuoc()
         {
-            int rows = dgv_dsthuoc.Rows.Count;
+            int rows = dgv_dsthuoc.Rows.Count-1;
             for (int i = 0; i < rows; i++)
             {
-                int slc = int.Parse(load_sdcon(dgv_dsthuoc.Rows[i].Cells[2].Value.ToString())) - int.Parse(dgv_dsthuoc.Rows[i].Cells[2].Value.ToString());
+                int slc = int.Parse(load_sdcon(dgv_dsthuoc.Rows[i].Cells[1].Value.ToString())) - int.Parse(dgv_dsthuoc.Rows[i].Cells[2].Value.ToString());
                 sua(dgv_dsthuoc.Rows[i].Cells[1].Value.ToString(), slc);
             }
         }

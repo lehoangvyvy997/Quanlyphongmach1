@@ -196,9 +196,11 @@ namespace Quanlyphongmach1.Presentation
                 txt_bnsocmnd.Text = dgv.Rows[dong].Cells[4].Value.ToString();
                 txt_bnchuandoan.Text = dgv.Rows[dong].Cells[6].Value.ToString();
 
-                string sql1 = "SELECT MaPhieuKham FROM dbo.PHIEUKHAM WHERE MaBenhNhan = N'" + txt_bnma.Text + "'";
+                string sql1 = "SELECT MaPhieuKham FROM dbo.PHIEUKHAM WHERE MaBenhNhan = '" + txt_bnma.Text + "'";
                 DataTable ds_maBn = cn.taobang(sql1);
                 int countPukh = ds_maBn.Rows.Count;
+                //txt_1tenbs.Text = countPukh.ToString();
+
                 switch (countPukh)
                 {
                     case 0:
@@ -454,7 +456,7 @@ namespace Quanlyphongmach1.Presentation
                 ck.TIENSUDUNGDVSOCUU = tiensc.ToString();
                 sumDvsc = tiensc.ToString();
                 ck.TONGTIEN = txt_hdtien.Text;
-                ck.NGAYLAPHOADON = DateTime.Now.ToString();
+                ck.NGAYLAPHOADON = DateTime.Now.ToShortDateString();
                 ck.MAHOADONTHUTIEN = txt_hdma.Text;
                 ck.MABENHNHAN = txt_bnma.Text;
             }
@@ -470,6 +472,7 @@ namespace Quanlyphongmach1.Presentation
         {
             if(txt_hdtienkham.Text != ""&& btn_hdin.Enabled==false)
             {
+
                 thucthi.themmoi(ck);
                 thucthi.sua_Bn(txt_bnma.Text);
 
@@ -526,17 +529,17 @@ namespace Quanlyphongmach1.Presentation
                 d2 = date.Month.ToString();
             // thiết lập số đếm
             if (val < 10)
-                d3 = "@SHD000" + val.ToString();
+                d3 = "HD000" + val.ToString();
             else
             {
                 if (val < 100)
-                    d3 = "@SHD00" + val.ToString();
+                    d3 = "HD00" + val.ToString();
                 else
                 {
                     if (val < 1000)
-                        d3 = "@SHD0" + val.ToString();
+                        d3 = "HD0" + val.ToString();
                     else
-                        d3 = "@SHD" + val.ToString();
+                        d3 = "HD" + val.ToString();
                 }
             }
 
