@@ -27,7 +27,7 @@ namespace Quanlyphongmach1.DataAccess
         {
             return cn.kiemtra("select count(*) from dbo.CHITIETDVSOCUUTAICHO where MaPhieuKham = '" + mapukh + "' AND MaLoaiDVSoCuu='" + madv + "' AND MaDuocPhamDVSoCuu='" + madp + "'");
         }
-        // thêm mới chi tiết dịch vụ kỹ thuật
+        // thêm mới chi tiết dịch vụ sơ cứu
         public void themmoi(EC_tb_Chitietdvsocuutaicho val)
         {
             string sql = @"INSERT INTO dbo.CHITIETDVSOCUUTAICHO

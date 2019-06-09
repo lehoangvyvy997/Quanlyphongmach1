@@ -187,7 +187,7 @@ namespace Quanlyphongmach1.Presentation
 
         private void btn_scluu_Click(object sender, EventArgs e)
         {
-            if (cbo_scmadv.Text != "" && cbo_scmadp.Text != "" && txt_scsoluongdp.Text == "")
+            if (cbo_scmadv.Text != "" && cbo_scmadp.Text != "" && txt_scsoluongdp.Text != "")
             {
                 if (themmoi == true)
                 {

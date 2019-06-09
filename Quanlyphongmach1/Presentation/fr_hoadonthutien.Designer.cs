@@ -460,6 +460,7 @@
             this.txt_hdtienkham.TabIndex = 3;
             this.txt_hdtienkham.Text = "30000";
             this.txt_hdtienkham.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_hdtienkham.TextChanged += new System.EventHandler(this.txt_hdtienkham_TextChanged);
             // 
             // txt_hdtien
             // 
@@ -468,6 +469,7 @@
             this.txt_hdtien.ReadOnly = true;
             this.txt_hdtien.Size = new System.Drawing.Size(165, 26);
             this.txt_hdtien.TabIndex = 3;
+            this.txt_hdtien.Text = "0";
             this.txt_hdtien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_hdma

@@ -15,7 +15,8 @@ namespace Quanlyphongmach1.Presentation
 {
     public partial class fr_hoadonthutien : Form
     {
-        private string sumThuoc, sumDvsc, sumDvkt;
+        private string sumThuoc, sumDvsc, sumDvkt, tongtiendv;
+        int countrowbn;
         public fr_hoadonthutien()
         {
             InitializeComponent();
@@ -131,6 +132,9 @@ namespace Quanlyphongmach1.Presentation
         {
             string sql = "SELECT MaBenhNhan,HoTenBenhNhan,Tuoi,GioiTinh,SoCMND,DiaChi,ChuanDonSoLuot,NgayKhamBenh,MaPhongKham1,STTPhongKham1,MaPhongKham2,STTPhongKham2,MaPhongKham3,STTPhongKham3 FROM dbo.BENHNHAN WHERE ThuVienPhi = N'Chưa thu'";
             dgv.DataSource = cn.taobang(sql);
+            //
+            DataTable ds_bn = cn.taobang(sql);
+            countrowbn = ds_bn.Rows.Count;
 
             SqlConnection con = cn.getcon();
             con.Open();
@@ -186,8 +190,8 @@ namespace Quanlyphongmach1.Presentation
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dong = e.RowIndex;
-
-            if(dong!=-1)
+            
+            if (dong!=-1&&dong!=countrowbn)
             {
                 txt_bnma.Text = dgv.Rows[dong].Cells[0].Value.ToString();
                 txt_bnhoten.Text = dgv.Rows[dong].Cells[1].Value.ToString();
@@ -250,7 +254,7 @@ namespace Quanlyphongmach1.Presentation
                             else
                             {
                                 chk_1sc.Checked = true;
-                                lb_1tiendvsc.Text = thucthi.Load_tiendvkt(maphieukham1);
+                                lb_1tiendvsc.Text = thucthi.Load_tiendvsc(maphieukham1);
                             }
                             break;
                         }
@@ -447,6 +451,7 @@ namespace Quanlyphongmach1.Presentation
                 tienthuoc = int.Parse(lb_1tienkedon.Text) + int.Parse(lb_2tienkedon.Text) + int.Parse(lb_3tienkedon.Text);
                 tienkt = int.Parse(lb_1tiendvkt.Text) + int.Parse(lb_2tiendvkt.Text) + int.Parse(lb_3tiendvkt.Text);
                 tiensc = int.Parse(lb_1tiendvsc.Text) + int.Parse(lb_2tiendvsc.Text) + int.Parse(lb_3tiendvsc.Text);
+                tongtiendv = (tienthuoc + tienkt + tiensc).ToString();
                 tongtien = tienthuoc + tienkt + tiensc + int.Parse(txt_hdtienkham.Text);
                 txt_hdtien.Text = tongtien.ToString();
                 ck.TIENTHUOC = tienthuoc.ToString();
@@ -544,6 +549,11 @@ namespace Quanlyphongmach1.Presentation
             }
 
             txt_hdma.Text = d1 + d2 + date.Year.ToString() + d3;
+        }
+
+        private void txt_hdtienkham_TextChanged(object sender, EventArgs e)
+        {
+            txt_hdtien.Text = (int.Parse(tongtiendv) + int.Parse(txt_hdtienkham.Text)).ToString();
         }
 
         private void btn_hdxkt_Click(object sender, EventArgs e)
