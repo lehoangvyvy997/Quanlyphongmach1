@@ -1,7 +1,7 @@
-﻿CREATE DATABASE QL_PM2
+﻿CREATE DATABASE QL_PM3
 GO
 
-USE QL_PM2
+USE QL_PM3
 GO
 -- Quan ly nhan vien
 CREATE TABLE CHUCVU
@@ -1060,60 +1060,848 @@ INSERT INTO dbo.PHIEUNHAPHANG
 VALUES
 (   'PNH001',        -- MaPhieuNhapHang - varchar(15)
     'NCC01',        -- MaNhaCungCap - varchar(15)
-    GETDATE(), -- NgayNhap - date
+    '2019/06/01', -- NgayNhap - date
     '5',        -- SoLuongDanhMucHangNhap - varchar(10)
     '1000000',        -- SoTien - varchar(15)
-    N'Chưa nhập liệu'        -- TinhTrang - nvarchar(50)
+    N'Đã nhập liệu'        -- TinhTrang - nvarchar(50)
     )
 
 INSERT INTO dbo.PHIEUNHAPHANG
 VALUES
 (   'PNH002',        -- MaPhieuNhapHang - varchar(15)
     'NCC02',        -- MaNhaCungCap - varchar(15)
-    GETDATE(), -- NgayNhap - date
+    '2019/06/01', -- NgayNhap - date
     '10',        -- SoLuongDanhMucHangNhap - varchar(10)
     '1500000',        -- SoTien - varchar(15)
-    N'Chưa nhập liệu'        -- TinhTrang - nvarchar(50)
+    N'Đã nhập liệu'        -- TinhTrang - nvarchar(50)
     )
 
 INSERT INTO dbo.PHIEUNHAPHANG
 VALUES
 (   'PNH003',        -- MaPhieuNhapHang - varchar(15)
     'NCC03',        -- MaNhaCungCap - varchar(15)
-    GETDATE(), -- NgayNhap - date
+    '2019/06/01', -- NgayNhap - date
     '15',        -- SoLuongDanhMucHangNhap - varchar(10)
     '2000000',        -- SoTien - varchar(15)
-    N'Chưa nhập liệu'        -- TinhTrang - nvarchar(50)
+    N'Đã nhập liệu'        -- TinhTrang - nvarchar(50)
     )
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+------------------------------ Chi tiết phiếu nhập hàng
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH001',        -- MaPhieuNhapHang - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'DCYT001',        -- MaHangNhap - varchar(15)
+    N'Bom kim tiêm 10cc',       -- TenHangNhap - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(50)
+    '200000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH001',        -- MaPhieuNhapHang - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'DCYT002',        -- MaHangNhap - varchar(15)
+    N'Bom kim tiêm 100ml',       -- TenHangNhap - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(50)
+    '150000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH001',        -- MaPhieuNhapHang - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'DCYT003',        -- MaHangNhap - varchar(15)
+    N'Bom kiem tiêm 3cc',       -- TenHangNhap - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(50)
+    '180000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH001',        -- MaPhieuNhapHang - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Bịch',       -- DonVi - nvarchar(50)
+    'DCYT004',        -- MaHangNhap - varchar(15)
+    N'Băng gạc',       -- TenHangNhap - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(50)
+    '10000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH001',        -- MaPhieuNhapHang - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Bịch',       -- DonVi - nvarchar(50)
+    'DCYT005',        -- MaHangNhap - varchar(15)
+    N'Bông gòn',       -- TenHangNhap - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(50)
+    '5000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0001',        -- MaHangNhap - varchar(15)
+    N'EUGICA',       -- TenHangNhap - nvarchar(100)
+    N'Eucalyptol 100mg, Menthol 0,5mg',       -- CongDung - nvarchar(50)
+    '40000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0002',        -- MaHangNhap - varchar(15)
+    N'OTIV',       -- TenHangNhap - nvarchar(100)
+    N'Blueberry',       -- CongDung - nvarchar(50)
+    '285000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    30          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0003',        -- MaHangNhap - varchar(15)
+    N'Amoxicilin25',       -- TenHangNhap - nvarchar(100)
+    N'Amoxicilin 250mg',       -- CongDung - nvarchar(50)
+    '25000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    25          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0004',        -- MaHangNhap - varchar(15)
+    N'Loperamide',       -- TenHangNhap - nvarchar(100)
+    N'Capsules BP 2mg',       -- CongDung - nvarchar(50)
+    '42000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0005',        -- MaHangNhap - varchar(15)
+    N'Carbogast',       -- TenHangNhap - nvarchar(100)
+    N'Vegetable charcoal 400mg',       -- CongDung - nvarchar(50)
+    '46000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    30          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0006',        -- MaHangNhap - varchar(15)
+    N'PROBIO',       -- TenHangNhap - nvarchar(100)
+    N'Vitamin B1,B2,B3',       -- CongDung - nvarchar(50)
+    '15000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    13          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0007',        -- MaHangNhap - varchar(15)
+    N'ACTAPULGITE',       -- TenHangNhap - nvarchar(100)
+    N'Attapulgite mormoiron 3g',       -- CongDung - nvarchar(50)
+    '102000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    30          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0008',        -- MaHangNhap - varchar(15)
+    N'PMS-DIVACAL',       -- TenHangNhap - nvarchar(100)
+    N'Calci D',       -- CongDung - nvarchar(50)
+    '65000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    20          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0009',        -- MaHangNhap - varchar(15)
+    N'AC MEXCOLD',       -- TenHangNhap - nvarchar(100)
+    N'PARACETAMOL 325mg, CHLORPHENIRAMIN 2mg',       -- CongDung - nvarchar(50)
+    '30000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0010',        -- MaHangNhap - varchar(15)
+    N'PANADOL EXTRA',       -- TenHangNhap - nvarchar(100)
+    N'Paracetamol 500mg, Cafein 65mg',       -- CongDung - nvarchar(50)
+    '178000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    180          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0011',        -- MaHangNhap - varchar(15)
+    N'Cenflu',       -- TenHangNhap - nvarchar(100)
+    N'Paracetamol 650mg',       -- CongDung - nvarchar(50)
+    '85000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0012',        -- MaHangNhap - varchar(15)
+    N'Piromax',       -- TenHangNhap - nvarchar(100)
+    N'Piroxicam 10mg',       -- CongDung - nvarchar(50)
+    '42000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0013',        -- MaHangNhap - varchar(15)
+    N'Berocca',       -- TenHangNhap - nvarchar(100)
+    N'Vitamin C, B1, B2, B5',       -- CongDung - nvarchar(50)
+    '65000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    10          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0014',        -- MaHangNhap - varchar(15)
+    N'Mekocefalor25',       -- TenHangNhap - nvarchar(100)
+    N'Mekocefalor 250mg',       -- CongDung - nvarchar(50)
+    '29000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    12          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH003',        -- MaPhieuNhapHang - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    'THKH0015',        -- MaHangNhap - varchar(15)
+    N'Mekocefalor12',       -- TenHangNhap - nvarchar(100)
+    N'Mekocefalor 125mg',       -- CongDung - nvarchar(50)
+    '24000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    12          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0001',        -- MaHangNhap - varchar(15)
+    N'Ringer lactate',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '75000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0002',        -- MaHangNhap - varchar(15)
+    N'NaCl 0,9%',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '60000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0003',        -- MaHangNhap - varchar(15)
+    N'NaCl 7,5%',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '55000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0004',        -- MaHangNhap - varchar(15)
+    N'Albumin 4%',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '45000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0005',        -- MaHangNhap - varchar(15)
+    N'Albumin 20%',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '60000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0006',        -- MaHangNhap - varchar(15)
+    N'Dextran (Rheomacrode)',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '50000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Bình',       -- DonVi - nvarchar(50)
+    'DPSC0007',        -- MaHangNhap - varchar(15)
+    N'Dextran (Hemodex)',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '70000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Lọ',       -- DonVi - nvarchar(50)
+    'DPSC0008',        -- MaHangNhap - varchar(15)
+    N'Mimosa',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '60000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    50          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Lọ',       -- DonVi - nvarchar(50)
+    'DPSC0009',        -- MaHangNhap - varchar(15)
+    N'Sanbutamol2',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '12000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    100          -- SoLuongNhap - int
+    )
+INSERT dbo.CHITIETPHIEUNHAP
+
+VALUES
+(   'PNH002',        -- MaPhieuNhapHang - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Lọ',       -- DonVi - nvarchar(50)
+    'DPSC0010',        -- MaHangNhap - varchar(15)
+    N'Duphalac',       -- TenHangNhap - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(50)
+    '85000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    20          -- SoLuongNhap - int
+    )
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+------------------------------ Thuốc khám
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0001',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'EUGICA',       -- TenThuocKham - nvarchar(100)
+    N'Eucalyptol 100mg, Menthol 0,5mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '40000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '45000',        -- GiaThuocBan - varchar(15)
+    100          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0002',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'OTIV',       -- TenThuocKham - nvarchar(100)
+    N'Blueberry',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '285000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '330000',        -- GiaThuocBan - varchar(15)
+    30          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0003',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Amoxicilin25',       -- TenThuocKham - nvarchar(100)
+    N'Amoxicilin 250mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '25000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '29425',        -- GiaThuocBan - varchar(15)
+    25          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0004',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Loperamide',       -- TenThuocKham - nvarchar(100)
+    N'Capsules BP 2mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '42000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '49434',        -- GiaThuocBan - varchar(15)
+    100          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0005',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Carbogast',       -- TenThuocKham - nvarchar(100)
+    N'Vegetable charcoal 400mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '46000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '54142',        -- GiaThuocBan - varchar(15)
+    30          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0006',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'PROBIO',       -- TenThuocKham - nvarchar(100)
+    N'Vitamin B1,B2,B3',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '15000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '18000',        -- GiaThuocBan - varchar(15)
+    13          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0007',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'ACTAPULGITE',       -- TenThuocKham - nvarchar(100)
+    N'Attapulgite mormoiron 3g',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '102000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '115000',        -- GiaThuocBan - varchar(15)
+    30          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0008',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'PMS-DIVACAL',       -- TenThuocKham - nvarchar(100)
+    N'Calci D',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '65000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '73500',        -- GiaThuocBan - varchar(15)
+    20          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0009',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'AC MEXCOLD',       -- TenThuocKham - nvarchar(100)
+    N'PARACETAMOL 325mg, CHLORPHENIRAMIN 2mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '30000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '35000',        -- GiaThuocBan - varchar(15)
+    100          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0010',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'PANADOL EXTRA',       -- TenThuocKham - nvarchar(100)
+    N'Paracetamol 500mg, Cafein 65mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '178000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '198000',        -- GiaThuocBan - varchar(15)
+    180          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0011',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Cenflu',       -- TenThuocKham - nvarchar(100)
+    N'Paracetamol 650mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '85000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '100045',        -- GiaThuocBan - varchar(15)
+    100          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0012',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Piromax',       -- TenThuocKham - nvarchar(100)
+    N'Piroxicam 10mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '42000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '49434',        -- GiaThuocBan - varchar(15)
+    100          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0013',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Berocca',       -- TenThuocKham - nvarchar(100)
+    N'Vitamin C, B1, B2, B5',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '65000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '76505',        -- GiaThuocBan - varchar(15)
+    10          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0014',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Mekocefalor25',       -- TenThuocKham - nvarchar(100)
+    N'Mekocefalor 250mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '29000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '34133',        -- GiaThuocBan - varchar(15)
+    12          -- SoLuongCon - int
+    )
+INSERT dbo.THUOCKHAM
+
+VALUES
+(   'THKH0015',        -- MaThuocKham - varchar(15)
+    'DP001',        -- MaLoaiDuocPham - varchar(15)
+    N'Mekocefalor12',       -- TenThuocKham - nvarchar(100)
+    N'Mekocefalor 125mg',       -- CongDung - nvarchar(100)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '24000',        -- GiaThuocNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '28248',        -- GiaThuocBan - varchar(15)
+    12          -- SoLuongCon - int
+    )
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+------------------------------ Thuốc khám
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0001',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Ringer lactate',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '75000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '85000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0002',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'NaCl 0,9%',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '60000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '75000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0003',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'NaCl 7,5%',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '55000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '70000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0004',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Albumin 4%',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '45000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '60000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0005',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Albumin 20%',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '60000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '75000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0006',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Dextran (Rheomacrode)',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '50000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '65000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0007',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Dextran (Hemodex)',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Bình',       -- DonVi - nvarchar(50)
+    '70000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '85000',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0008',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Mimosa',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Lọ',       -- DonVi - nvarchar(50)
+    '60000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '70620',        -- GiaBan - varchar(15)
+    50          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0009',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Sanbutamol2',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Lọ',       -- DonVi - nvarchar(50)
+    '12000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '14124',        -- GiaBan - varchar(15)
+    100          -- SoLuongCon - int
+    )
+INSERT dbo.DUOCPHAMDVYTESOCUU
+VALUES
+(   'DPSC0010',        -- MaDuocPhamDVSoCuu - varchar(15)
+    'DP003',        -- MaLoaiDuocPham - varchar(15)
+    N'Duphalac',       -- TenDuocPham - nvarchar(100)
+    N'Phục hồi sức khỏe',       -- CongDung - nvarchar(200)
+    N'Lọ',       -- DonVi - nvarchar(50)
+    '85000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng',       -- TinhTrangConSD - nvarchar(50)
+    '100045',        -- GiaBan - varchar(15)
+    20          -- SoLuongCon - int
+    )
+	--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+------------------------------ Dụng cụ y tế
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+INSERT dbo.DUNGCUYTE
+
+VALUES
+(   'DCYT001',        -- MaDungCuYTe - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Bom kim tiêm 10cc',       -- TenDungCuYTe - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(200)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '200000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng'        -- TinhTrangSuDung - nvarchar(50)
+    )
+INSERT dbo.DUNGCUYTE
+
+VALUES
+(   'DCYT002',        -- MaDungCuYTe - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Bom kim tiêm 100ml',       -- TenDungCuYTe - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(200)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '150000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng'        -- TinhTrangSuDung - nvarchar(50)
+    )
+INSERT dbo.DUNGCUYTE
+
+VALUES
+(   'DCYT003',        -- MaDungCuYTe - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Bom kiem tiêm 3cc',       -- TenDungCuYTe - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(200)
+    N'Hộp',       -- DonVi - nvarchar(50)
+    '180000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng'        -- TinhTrangSuDung - nvarchar(50)
+    )
+INSERT dbo.DUNGCUYTE
+
+VALUES
+(   'DCYT004',        -- MaDungCuYTe - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Băng gạc',       -- TenDungCuYTe - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(200)
+    N'Bịch',       -- DonVi - nvarchar(50)
+    '10000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng'        -- TinhTrangSuDung - nvarchar(50)
+    )
+INSERT dbo.DUNGCUYTE
+
+VALUES
+(   'DCYT005',        -- MaDungCuYTe - varchar(15)
+    'DP002',        -- MaLoaiDuocPham - varchar(15)
+    N'Bông gòn',       -- TenDungCuYTe - nvarchar(100)
+    N'Dụng cụ y tế',       -- CongDung - nvarchar(200)
+    N'Bịch',       -- DonVi - nvarchar(50)
+    '5000',        -- GiaNhap - varchar(15)
+    '2019/06/01', -- NgayNhap - date
+    N'Còn sử  dụng'        -- TinhTrangSuDung - nvarchar(50)
+    )
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	--SELECT * FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH01'
 
-	--SELECT * FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH02'
 
-	--SELECT * FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH03'
 
-	--SELECT * FROM dbo.PHONGKHAM
-
-	--DELETE FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH01'
-	--DELETE FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH02'
-	--DELETE FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH03'
-	--DELETE FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH04'
-	--DELETE FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH05'
-	--DELETE FROM dbo.BENHNHAN_TAM WHERE MaPhongKham = 'PGKH06'
-
-	--DELETE FROM dbo.BENHNHAN WHERE NgayKhamBenh = '2019/05/08'
-
-	--SELECT COUNT(*) FROM dbo.BENHNHAN WHERE NgayKhamBenh = '2019/05/08'
-
-	--SELECT * FROM dbo.NHACUNGCAP
-	--SELECT * FROM dbo.NHANVIEN	
-	--SELECT * FROM dbo.CHAMCONG
-	-- SELECT COUNT(*) FROM dbo.NHANVIEN WHERE TenNhanVien = N'Nguyễn Thị D'
-	-- SELECT MaNhanVien FROM dbo.NHANVIEN WHERE TenNhanVien = N'Nguyễn Thị D'
-
-	-- SELECT * FROM dbo.CHAMCONG WHERE (MaNhanVien = N'NV002' AND NgayChamCong = '2019-09-05') OR (MaNhanVien = N'NV003' AND NgayChamCong = '2019-09-05')
-
-	-- SELECT * FROM dbo.LOAINHANVIEN
